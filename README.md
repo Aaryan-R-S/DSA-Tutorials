@@ -110,4 +110,4 @@ See `LICENSE` for more information.
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[product-screenshot]: readme-images/screenshot.png
+[product-screenshot]: readme-images/ss.png

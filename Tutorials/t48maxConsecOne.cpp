@@ -19,7 +19,7 @@ int main()
         if(v[j]==0){
             zeroCount++;
         }
-        if(zeroCount>k){
+        while(zeroCount>k){
             if(v[i]==0)
                 zeroCount--;
             i++;

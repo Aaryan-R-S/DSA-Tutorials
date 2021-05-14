@@ -43,6 +43,7 @@ void inOrder(Node* n){
     }
 };
 
+// DON'T USE THIS - May not always work
 int isBST(Node* root){
     static Node* prev = NULL;
     if(root!=NULL){
@@ -62,7 +63,22 @@ int isBST(Node* root){
     }
 };
 
+// USE THIS - This is good - O(n)
+bool isBST(Node* root, Node* min, Node* max){
+    if(root==NULL){
+        return true;
+    }
+    if(min!=NULL && root->data<=min->data){
+        return false;
+    }
+    if(max!=NULL && root->data>=max->data){
+        return false;
+    }
+    bool leftValid = isBST(root->left, min, root);
+    bool rightValid = isBST(root->right, root, max);
 
+    return leftValid and rightValid;
+}
 
 int main()
 {
@@ -85,7 +101,8 @@ int main()
     inOrder(Root);
     cout<<endl;
 
-    cout<<isBST(Root)<<endl;
+    // cout<<isBST(Root)<<endl;
+    cout<<isBST(Root, NULL, NULL)<<endl;
 
 
     return 0;

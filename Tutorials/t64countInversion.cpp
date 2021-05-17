@@ -34,7 +34,7 @@ int merge(int A[], int low, int mid, int high){
             // a[i]>a[j] && i<j
             inv += mid-low+1-i;  
             // mid-low+1 = no. of elems in left sub-array(sorted)
-            // -i signifies if a[i]>a[j] so is true for i+1,i+2,...,mid as eft sub-array is sorted
+            // -i signifies if a[i]>a[j] so is true for i+1,i+2,...,mid as left sub-array is sorted
 
             j++; 
             k++;

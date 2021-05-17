@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+#include<cmath>
 using namespace std;
 
 // Find sum of subarray of len k from arr of size n with property of having max sum less than X
@@ -87,6 +88,31 @@ void divByThree(vector<int> arr, int k){
     }
 }
 
+// For a given arr and an int k check if there exists a sub arr of size k which is a palindrome
+bool isPalindrome(int arr[], int i, int j){
+    while(i<j)
+     {
+        if(arr[i] != arr[j]){
+            return false;
+        }
+         i++;
+         j--;
+     }
+          
+     return true;
+}
+
+int findPalindrome(int arr[], int n, int k){
+    int num=0;
+
+    for(int i=0; i<n-k+1; i++){
+         if(isPalindrome(arr, i, i+k-1))
+             return i;
+    }
+
+    return -1;
+}
+
 int main()
 {
     // int arr[] = {7,5,4,6,8,9};
@@ -100,9 +126,14 @@ int main()
     // int x = 20;
     // cout<<minSubArrSize(arr, n, x)<<endl;
     
-    vector<int> arr = {7,5,2,1,4,9};
+    // vector<int> arr = {7,5,2,1,4,9};
+    // int k = 3;
+    // divByThree(arr, k);
+
+    int arr[] = {7,5,8,6,8,9};
+    int n = 6;
     int k = 3;
-    divByThree(arr, k);
+    cout<<findPalindrome(arr, n, k)<<endl;
 
     return 0;
 }

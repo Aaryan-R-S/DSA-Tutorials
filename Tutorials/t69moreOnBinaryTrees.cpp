@@ -67,8 +67,10 @@ void levelOrderTrav(Node* root){
             if(n->right!=NULL)
                 q.push(n->right);
         }
-        else if (!q.empty()){
-            q.push(NULL);
+        else {
+            if (!q.empty())
+                q.push(NULL);
+            
         }
     }
     return;

@@ -109,10 +109,47 @@ void verticalOrderPrint(){
 
 }
 
+// Count no of subarrays with sum zero
+void sumZero(){
+    int n;cin>>n;
+
+    vector<int> v(n);
+    for (int i = 0; i < n; i++)
+    {
+        cin>>v[i];
+    }
+
+    map<int,int> myMap;
+
+    int preSum = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        preSum += v[i];
+        myMap[preSum]++;
+    }
+    
+    int ans = 0;
+    for (auto &i : myMap)
+    {
+        int c = i.second;
+        ans += (c*(c-1))/2;
+
+        if(i.first==0){
+            ans += c;
+        }
+    }
+
+    cout<<ans<<endl;
+    
+}
+
 int main(){
     // countFreq();
 
     // verticalOrderPrint();
+
+    // sumZero();
 
     return 0;
 }

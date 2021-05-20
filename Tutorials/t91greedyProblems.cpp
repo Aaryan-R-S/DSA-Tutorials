@@ -76,6 +76,86 @@ int minTime(vector<int> v){
     return ans;
 }
 
+// Expedi -- see apna college vid 148
+void expedi(){
+    int t; cin>>t;  // test cases
+    while(t--){
+        int n;cin>>n;   // no of stops
+        vector<pair<int,int>> stops(n);
+        for (int i = 0; i < n; i++)
+        {
+            cin>>stops[i].first>>stops[i].second; //  stop dist from town -- fuel capacity
+        }
+        int fuel, dist;
+        cin>>dist>>fuel;  // truck distance from town -- fuel at start
+        for (int i = 0; i < n; i++)
+        {
+            stops[i].first = dist - stops[i].first; // update stop dist from truck
+        }
+        sort(stops.begin(), stops.end());
+
+        int noOfStopsUsed = 0;
+        int currFuel = fuel;
+
+        priority_queue<int,vector<int>> maxHeap;
+        bool flag = 0;
+        for (int i = 0; i < n; i++)
+        {
+            if(currFuel>=dist){
+                break;
+            }
+            while(currFuel<stops[i].first){
+                if(maxHeap.empty()){
+                    flag = 1;
+                    break;
+                }
+                noOfStopsUsed++;
+                currFuel += maxHeap.top();
+                maxHeap.pop();
+            }
+            if(flag){
+                break;
+            }
+            maxHeap.push(stops[i].second);
+        }
+
+        if(flag){
+            cout<<"Not Possible"<<endl;
+            continue;
+        }   
+        while(!maxHeap.empty() && currFuel<dist){
+            currFuel += maxHeap.top();
+            maxHeap.pop();
+            noOfStopsUsed++;
+        }
+        if(currFuel<dist){
+            cout<<"Not Possible"<<endl;
+            continue;
+        }
+        cout<<noOfStopsUsed<<endl;
+    }
+
+}
+
+// Max and min diff -- divide given array of siz 2n to two arrays each of size n to get max and min abs diff b/w elems i.e.  max and min: Sigma abs(A[i]-B[i]) from 0 to n
+void diff(){
+    int n; cin>>n;
+    vector<int> v(n);
+    for (int i = 0; i < n; i++)
+    {
+        cin>>v[i];
+    }
+    sort(v.begin(), v.end());
+
+    long long int mx = 0, mn = 0;
+    for (int i = 0; i < n/2; i++)
+    {
+        mx+= (v[i+n/2] - v[i]);
+        mn+= (v[2*i+1] - v[2*i]);
+    }
+    cout<<mn<<" "<<mx<<endl;
+}
+
 int main()
 {
     // int n; cin>>n;
@@ -110,13 +190,17 @@ int main()
     // int w; cin>>w;
     // cout<<fracKnapsack(v, w)<<endl;
 
-    int n; cin>>n;
-    vector<int> v(n);
-    for (int i = 0; i < n; i++)
-    {
-        cin>>v[i];
-    }
-    cout<<minTime(v)<<endl;
+    // int n; cin>>n;
+    // vector<int> v(n);
+    // for (int i = 0; i < n; i++)
+    // {
+    //     cin>>v[i];
+    // }
+    // cout<<minTime(v)<<endl;
+
+    // expedi();
+
+    // diff();
 
     return 0;
 }

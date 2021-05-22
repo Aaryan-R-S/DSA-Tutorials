@@ -57,7 +57,7 @@ int fracKnapsack(vector<pair<int,int>> &v, int w){
     return ans;
 }
 
-// You are given an arr of n files with their computation times, choose any two files add their time and append it to tje list of the computation times , repeat the process to obtain min comp. time at end
+// You are given an arr of n files with their computation times, choose any two files add their time and append it to the list of the computation times , repeat the process to obtain min comp. time at end
 int minTime(vector<int> v){
     priority_queue<int, vector<int>, greater<int>> minHeap;
     for (int i = 0; i < v.size(); i++)

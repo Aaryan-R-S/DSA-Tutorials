@@ -183,7 +183,7 @@ void dijkstra(){
         s.erase(x);
         for(auto i:graph[x.second]){
             if(dist[i.first]>dist[x.second]+i.second){
-                s.erase({dist[i.first], i.first});   // if not present i.e. running first ime it won't give any error unlike python's set
+                s.erase({dist[i.first], i.first});   // if not present i.e. running first time it won't give any error unlike python's set
                 dist[i.first] = dist[x.second]+i.second;
                 s.insert({dist[i.first], i.first});
             }

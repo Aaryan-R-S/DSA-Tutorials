@@ -1,0 +1,138 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define vi vector<int>
+#define vvi vector<vi>
+#define vvvi vector<vvi>
+#define rep(i,s,e,c) for (int i = s; i < e; i c)
+
+void noOfSubs(){
+    int n; cin>>n;
+    string s; cin>>s;
+
+    int e=1, a=0, ab=0, abc=0;
+    rep(i,0,n,++)
+    {
+        if(s[i]=='a')
+            a+=e;
+        else if(s[i]=='b')
+            ab+=a;
+        else if(s[i]=='c')
+            abc+=ab;
+        else if(s[i]=='?'){
+            abc = 3*abc+ab;
+            ab = 3*ab+a;
+            a = 3*a+e;
+            e = 3*e;
+        }
+    }
+    cout<<abc<<endl;
+}
+
+// count no of binary string of len N without consec one's
+// observation -- below code is working as fibonacci sequence so u can directly use fib(n+1) to get ans for any n  
+int binaryStr(int n, vvi &dp){
+    if(n==1)
+        return 2;
+
+    if(dp[0][n]==-1){
+        binaryStr(n-1, dp);
+        dp[0][n] = dp[0][n-1]+dp[1][n-1];
+        // Fib sequence : dp[0][n] = dp[0][n-1]+dp[0][n-2];
+        // because dp[1][n-1] = dp[0][n-2]
+        // so use only fib sequence or fib func to get the ans
+        dp[1][n] = dp[0][n-1];
+    }
+
+    return dp[0][n]+dp[1][n];
+}
+
+// O-N knapsack -- same as O-1 knapsack but you can take any item any times
+// Knapsack -- wt arr and val arr find max Val put in bag of max load W;
+int knapsack(int n, vi &wt, vi &val, int w, vvi &dp){
+    if(w<=0)
+        return 0;
+    if(n<=0)
+        return 0;
+    if(dp[n][w]!=-1)
+        return dp[n][w];
+    if(wt[n-1]>w)
+        dp[n][w] = knapsack(n-1, wt, val, w, dp);
+    else
+        dp[n][w] =
+        max(knapsack(n-1, wt, val, w, dp),
+            max(
+                knapsack(n, wt, val, w-wt[n-1], dp) + val[n-1],
+                knapsack(n-1, wt, val, w-wt[n-1], dp) + val[n-1]
+                )
+        );
+    return dp[n][w];
+}
+
+// Staircase problem -- person can climb 1, 2 or 3 strairs at time find no of ways in which he can climb the staircase of N stairs
+int staircase(int n, vi &dp){
+    if(dp[n]==-1){
+        dp[n] = staircase(n-1, dp)+staircase(n-2, dp)+staircase(n-3, dp);
+    }
+    return dp[n];
+}
+
+// LCS -- 3 strings
+// Longest common subsequence -- same as that of two strings
+int lcs(string &s1, string &s2, string &s3, int n, int m, int l, vvvi &dp){
+    if(n==0 || m==0 || l==0)
+        return 0;
+    if(dp[n][m][l]!=-1)
+        return dp[n][m][l];
+
+    if(s1[n-1]==s2[m-1] && s1[n-1]==s3[l-1]){
+        dp[n][m][l] = (1+lcs(s1, s2, s3, n-1, m-1, l-1, dp));
+    }
+    else{
+        int p = lcs(s1,s2,s3,n-1,m,l,dp);
+        int q = lcs(s1,s2,s3,n,m-1,l,dp);
+        int r = lcs(s1,s2,s3,n,m,l-1,dp);
+        dp[n][m][l] = max({p,q,r});
+    }
+    return dp[n][m][l];
+}
+
+
+int main()
+{
+    // noOfSubs();
+
+    // int n; cin>>n;
+    // vvi dp(2, vi(n+1,-1));
+    // dp[0][1] = 1;
+    // dp[1][1] = 1;
+    // cout<<binaryStr(n, dp)<<endl;
+
+    // int n;cin>>n;
+    // vi wt(n);
+    // vi val(n);
+    // rep(i, 0, n, ++)
+    //     cin>>wt[i];
+    // rep(i, 0, n, ++)
+    //     cin>>val[i];
+    // int w;cin>>w;
+    // vvi dp(10e3+2, vi(10e3+2, -1));
+    // cout<<knapsack(n, wt, val, w, dp)<<endl;
+
+    // int n; cin>>n;
+    // vi dp(10e5+2, -1);
+    // dp[0] = 1;
+    // dp[1] = 1;
+    // dp[2] = 2;
+    // cout<<staircase(n, dp)<<endl;
+
+    string s1, s2, s3;
+    cin>>s1>>s2>>s3;
+    int n = s1.size();
+    int m = s2.size();
+    int l = s3.size();
+    vvvi dp(200, vvi(200, vi(200, -1)));
+    cout<<lcs(s1, s2, s3, n, m, l, dp)<<endl;
+
+    return 0;
+}

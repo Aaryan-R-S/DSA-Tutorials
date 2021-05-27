@@ -98,6 +98,45 @@ int lcs(string &s1, string &s2, string &s3, int n, int m, int l, vvvi &dp){
 }
 
 
+// Ugly nums -- find nth ugly nums which is a num whose prime factors are 2, 3 or 5 only
+// E.g. -  1,2,3,4,5,6,8,10,12,...
+int ugly(int n, vi &dp){
+    int counter_2, counter_3, counter_5; 
+    counter_2 = counter_3 = counter_5 = 0;
+    dp[0] = 1;
+    rep(i,1,n,++){
+        dp[i] = min({ 2*dp[counter_2], 3*dp[counter_3], 5*dp[counter_5] });
+        if(2*dp[counter_2]==dp[i])
+            counter_2++;
+        if(3*dp[counter_3]==dp[i])
+            counter_3++;
+        if(5*dp[counter_5]==dp[i])
+            counter_5++;
+    }
+    return dp[n-1];
+}
+
+// LCS -- 2 strings -- Can change atmost k elems to make longest subseq
+int lcs(string &s1, string &s2, int n, int m, int k, vvi &dp){
+    if(n==0 || m==0)
+        return 0;
+    if(dp[n][m]!=-1)
+        return dp[n][m];
+    if(s1[n-1]==s2[m-1])
+        dp[n][m] = (1+lcs(s1, s2, n-1, m-1,k,dp));
+    else{
+        int c1=-1, c2, c3;
+        if(k>0){
+            c1 = (1+lcs(s1, s2, n-1, m-1,k-1,dp));
+        }
+        c2 = lcs(s1,s2,n-1,m,k,dp);
+        c3 = lcs(s1,s2,n,m-1,k,dp);
+        dp[n][m] = max({c1, c2, c3});
+    }
+    return dp[n][m];
+}
+
+
 int main()
 {
     // noOfSubs();
@@ -126,13 +165,25 @@ int main()
     // dp[2] = 2;
     // cout<<staircase(n, dp)<<endl;
 
-    string s1, s2, s3;
-    cin>>s1>>s2>>s3;
+    // string s1, s2, s3;
+    // cin>>s1>>s2>>s3;
+    // int n = s1.size();
+    // int m = s2.size();
+    // int l = s3.size();
+    // vvvi dp(200, vvi(200, vi(200, -1)));
+    // cout<<lcs(s1, s2, s3, n, m, l, dp)<<endl;
+
+    // int n; cin>>n;
+    // vi dp(n);
+    // cout<<ugly(n, dp)<<endl;
+
+    string s1, s2;
+    cin>>s1>>s2;
+    int k; cin>>k;
     int n = s1.size();
     int m = s2.size();
-    int l = s3.size();
-    vvvi dp(200, vvi(200, vi(200, -1)));
-    cout<<lcs(s1, s2, s3, n, m, l, dp)<<endl;
+    vvi dp(10e3+2, vi(10e3+2, -1));
+    cout<<lcs(s1, s2, n, m, k, dp)<<endl;
 
     return 0;
 }

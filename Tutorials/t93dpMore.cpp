@@ -97,7 +97,6 @@ int lcs(string &s1, string &s2, string &s3, int n, int m, int l, vvvi &dp){
     return dp[n][m][l];
 }
 
-
 // Ugly nums -- find nth ugly nums which is a num whose prime factors are 2, 3 or 5 only
 // E.g. -  1,2,3,4,5,6,8,10,12,...
 int ugly(int n, vi &dp){
@@ -136,6 +135,14 @@ int lcs(string &s1, string &s2, int n, int m, int k, vvi &dp){
     return dp[n][m];
 }
 
+// Friends pairing problem
+int pairs(int n, vi &dp){
+    if(n==0||n==1||n==2)
+        return n;
+    if(dp[n]==-1)
+        dp[n] = pairs(n-1, dp) + (n-1)*pairs(n-2, dp); 
+    return dp[n];       
+}
 
 int main()
 {
@@ -177,13 +184,46 @@ int main()
     // vi dp(n);
     // cout<<ugly(n, dp)<<endl;
 
-    string s1, s2;
-    cin>>s1>>s2;
-    int k; cin>>k;
-    int n = s1.size();
-    int m = s2.size();
-    vvi dp(10e3+2, vi(10e3+2, -1));
-    cout<<lcs(s1, s2, n, m, k, dp)<<endl;
+    // string s1, s2;
+    // cin>>s1>>s2;
+    // int k; cin>>k;
+    // int n = s1.size();
+    // int m = s2.size();
+    // vvi dp(10e3+2, vi(10e3+2, -1));
+    // cout<<lcs(s1, s2, n, m, k, dp)<<endl;
+
+    // Length of longest Bitonic subsequence -- Longest strictly increasing or decreasing or first strictly increaing and then decreasing subsequence
+    // int n; cin>>n;
+    // vi a(n);
+    // rep(i,0,n,++){
+    //     cin>>a[i];
+    // }
+    // vi dp_increase(n,1);
+    // vi dp_decrease(n,1);
+    // rep(i,0,n,++){
+    //     rep(j,0,i,++){
+    //         if(a[i]>a[j]){
+    //             dp_increase[i] = max(dp_increase[i], 1+dp_increase[j]);
+    //         }
+    //     }
+    // }
+    // for (int i = n-1; i >= 0; i--)
+    // {
+    //     for (int j = n-1; j > i; j--){
+    //         if(a[i]>a[j]){
+    //             dp_decrease[i] = max(dp_decrease[i], 1+dp_decrease[j]);
+    //         }
+    //     }
+    // }
+    // int ans=0;
+    // rep(i,0,n,++){
+    //     ans = max(ans, dp_increase[i]+dp_decrease[i]-1);
+    // }
+    // cout<<ans<<endl;
+
+    int n; cin>>n;
+    vi dp(n+1,-1);
+    cout<<pairs(n,dp)<<endl;
 
     return 0;
 }

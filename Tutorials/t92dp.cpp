@@ -77,16 +77,16 @@ int knapsack(int n, vi &wt, vi &val, int w, vvi &dp){
 }
 
 // Longest increasing subsequence
-int subs(vi &a, int n, vi &dp){
-    if(dp[n]!=-1)
-        return dp[n];
+int subs(vi &a, int n, vi &dp_subs){
+    if(dp_subs[n]!=-1)
+        return dp_subs[n];
 
-    dp[n] = 1;
+    dp_subs[n] = 1;
     rep(0,n,++){
         if(a[n]>a[i])
-            dp[n] = max(dp[n], 1 + subs(a, i, dp));
+            dp_subs[n] = max(dp_subs[n], 1 + subs(a, i, dp_subs));
     }
-    return dp[n];
+    return dp_subs[n];
 }
 
 // Longest common subsequence
@@ -148,13 +148,13 @@ int main()
     // vvi dp(10e3+2, vi(10e3+2, -1));
     // cout<<knapsack(n, wt, val, w, dp)<<endl;
 
-    // int n; cin>>n;
-    // vi a(n);
-    // rep(0,n,++){
-    //     cin>>a[i];
-    // }
-    // vi dp(10e5+2, -1);
-    // cout<<subs(a, n-1, dp)<<endl;
+    int n; cin>>n;
+    vi a(n);
+    rep(0,n,++){
+        cin>>a[i];
+    }
+    vi dp_subs(10e5+2, -1);
+    cout<<subs(a, n-1, dp_subs)<<endl;
 
     // string s1, s2;
     // cin>>s1>>s2;

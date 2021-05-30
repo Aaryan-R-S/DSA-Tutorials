@@ -46,6 +46,36 @@ public:
         return it->end;
     }
 
+    vector<string> find(string s){
+        vector<string> wordsFound;
+        int i = 0;
+        Node* it = this->root;
+        while(i<s.size()){
+            if(it->next[s[i]-'a']==NULL){
+                return wordsFound;
+            }
+            it = it->next[s[i]-'a'];
+            i++;
+        }
+        helperOfFind(it, wordsFound, s);
+        return wordsFound;
+    }
+
+    void helperOfFind(Node*it, vector<string> &wordsFound, string curr){
+        if(it==NULL){
+            return;
+        }
+        if(it->end){
+            wordsFound.push_back(curr);
+        }
+        for (int i = 0; i < 26; i++)
+        {
+            if(it->next[i]){
+                helperOfFind(it->next[i], wordsFound, curr+char('a'+i));
+            }
+        }
+        return;
+    }
 };
 
 int main()
@@ -62,6 +92,30 @@ int main()
     // myTrie->search("aami")?cout<<"ok\n":cout<<"no\n";
     // myTrie->search("aamif")?cout<<"ok\n":cout<<"no\n";
     // myTrie->search("zip")?cout<<"ok\n":cout<<"no\n";
+
+    Trie* myTrie = new Trie();
+    vector<string> words;
+    int n; cin>>n;
+    for (int i = 0; i < n; i++)
+    {
+        string w; cin>>w;
+        myTrie->insert(w);
+    }
+    int q; cin>>q;
+    for (int i = 0; i < q; i++)
+    {
+        string w; cin>>w;
+        vector<string> wordsFound = myTrie->find(w);
+        if(wordsFound.size()==0){
+            myTrie->insert(w);
+            cout<<"No suggestions!"<<endl;
+        }
+        else{
+            for (auto i : wordsFound)
+                cout<<i<<endl;
+        }
+    }
+
 
     return 0;
 }

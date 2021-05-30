@@ -1,27 +1,29 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class TrieNode{
+#define INT_SIZE 32
+
+class Node{
 public:
-    TrieNode *next[2];
-    TrieNode(){
+    Node *next[2];
+    Node(){
         this->next[0] = NULL;
         this->next[1] = NULL;
     }
 };
 
-TrieNode* buildTrie(vector<int> &a){
-    TrieNode* root = new TrieNode();
+Node* buildTrie(vector<int> &a){
+    Node* root = new Node();
     int n = a.size();
     for (int i = 0; i < n; i++)
     {
         int num = a[i];
-        TrieNode* curr = root;
-        for (int j = 31; j >= 0; j--)
+        Node* curr = root;
+        for (int j = INT_SIZE; j >= 0; j--)
         {
             int bit = (num>>j)&1;
             if(curr->next[bit] == NULL){
-                curr->next[bit] = new TrieNode();
+                curr->next[bit] = new Node();
             }
             curr = curr->next[bit];
         }
@@ -29,14 +31,15 @@ TrieNode* buildTrie(vector<int> &a){
     return root;
 }
 
-int xorSubarr(TrieNode* root, vector<int> &a){
+// Find max xor of two nums from a arr
+int xorTwoNums(Node* root, vector<int> &a){
     int ans = 0;
     for (int i = 0; i < a.size(); i++)
     {
         int num = a[i];
-        TrieNode* it = root;
+        Node* it = root;
         int curr_max = 0;
-        for (int j = 31; j >= 0; j--)
+        for (int j = INT_SIZE; j >= 0; j--)
         {
             int bit = (num>>j)&1 ? 0 : 1;
             if(it->next[bit]){
@@ -59,8 +62,8 @@ int xorSubarr(TrieNode* root, vector<int> &a){
 int main()
 {
     vector<int> a = {3,10,5,15,2};
-    TrieNode* root = buildTrie(a);
-    cout<<xorSubarr(root, a)<<endl;
+    Node* root = buildTrie(a);
+    cout<<xorTwoNums(root, a)<<endl;
 
     return 0;
 }

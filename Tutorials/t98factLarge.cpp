@@ -30,7 +30,7 @@ ll modFact(ll n, ll p){
     if(n>=p){
         return 0;
     }
-    ll res = p-1;
+    ll res = p-1;   // res = -1 but to avoid -ve ans we add mod i.e. p so it becomes p-1
     for (int i = n+1; i < p; i++)
     {
         res = (res*modInverse(i,p))%p; 

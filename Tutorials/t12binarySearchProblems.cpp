@@ -36,7 +36,7 @@ int largestMinDistance(int arr[], int n, int k){
     return result;
 }
 
-// Divide n books (given an array of size n showing no of pages in each book in sorted order) to m students such that max pags allocaated to a student is minimum
+// Divide n books (given an array of size n showing no of pages in each book in sorted order) to m students such that max pags allocated to a student is minimum
 bool isPossible(int arr[], int n, int m, int mid){
     int students = 1, sum = 0;
     for (int i = 0; i < n; i++)

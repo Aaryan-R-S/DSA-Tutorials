@@ -8,7 +8,7 @@ void sieve(int n){
     for (int i = 2; i <= n; i++)
     {
         if(primes[i]==0){
-            for (int j = i*i; j <= n; j+=i)
+            for (int j = i*i; j <= n; i==2?j+=i:j+=2*i)
             {
                 primes[j] = 1;    
             }

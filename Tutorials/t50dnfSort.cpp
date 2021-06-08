@@ -14,7 +14,7 @@ void printArray(int* arr, int len){
 };
 
 // Zero's|Ones's|Unkonown|Two's
-// 000000 111111 ******** 22222
+// 000000 111111 ******** *2222
 //        ^      ^        ^
 //        low    mid      high
 

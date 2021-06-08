@@ -71,7 +71,7 @@ int main()
     //     }
     //     cout<<endl;
     // }
-    // ANS - fib(n) is ans[1][1]
+    // ANS - fib(n) is ans[0][1]
 
     int n; cin>>n;
     vvi a = {{1,1,1},{0,1,1},{0,1,0}};

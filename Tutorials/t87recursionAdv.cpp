@@ -33,6 +33,7 @@ int path(int m, int n)
 };
 
 // GIVE A BOARD OF SIZE 2XN AND TILE OF SIZE 2X1. FIND NO OF WAYS TO TILE THE GIVEN BOARD USING THESE TILES
+// Order doesn't matter that is for n=2 ans should be 1 not 2 as we can rotate tile 90deg to get same configuration
 int tilingWays(int n)
 {
     if (n == 1 || n == 0)

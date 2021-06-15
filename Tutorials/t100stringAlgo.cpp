@@ -42,9 +42,46 @@ void stringHash(){
     cout<<distinct<<endl;
 }
 
+// Rabin Karp Algo to find the occurences of a string s in string t in O(s+t) where brute force will give you o(s*t)
+void occurences(){
+    vector<long long> powers(1e5+3);
+    powers[0] = 1;
+    for (int i = 1; i < powers.size(); i++)
+    {
+        powers[i] = (powers[i-1]*base)%MOD;
+    }
+
+    string s = "na";
+    string t = "apnacollegena";
+    int S = s.size(), T = t.size();
+
+    vector<long long> hashes(T+1, 0);
+    for (int i = 0; i < T; i++)
+    {
+        hashes[i+1] = (hashes[i] + (t[i]-'a'+1)*powers[i])%MOD;
+    }
+    
+    long long hash_s = 0;
+    for (int i = 0; i < S; i++)
+    {
+        hash_s = (hash_s + (s[i]-'a'+1)*powers[i])%MOD;
+    }
+    
+    for (int i = 0; i+S-1 < T; i++)
+    {
+        long long curr_h = (hashes[i+S] - hashes[i] + MOD)%MOD; // To overcome negative ans 
+        if(curr_h == (hash_s*powers[i])%MOD){
+            cout<<i<<" ";
+        }
+    }
+    
+}
+
 int main()
 {
     stringHash();
+
+    occurences();
        
     return 0;
 }

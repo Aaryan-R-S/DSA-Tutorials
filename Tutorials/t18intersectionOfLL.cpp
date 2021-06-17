@@ -290,9 +290,9 @@ void evenAfterOdd(node* &head){
         even->next = odd->next;
         even = even->next;
     }
-    if(odd->next!=NULL){
-        even->next = NULL;
-    }        
+    // if(odd->next!=NULL){
+    //     even->next = NULL;
+    // }        
     odd->next = evenStart;
     return;
 }

@@ -164,7 +164,6 @@ node* reverseK(node* &head, int k){
     return prevNode; 
 }
 
-
 // Hare and Tortoise ALgo OR Floyd's Algo
 bool detectCycle(node* &head){
     node* slowptr = head;

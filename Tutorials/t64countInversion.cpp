@@ -32,8 +32,8 @@ int merge(int A[], int low, int mid, int high){
             B[k] = A[j];
 
             // a[i]>a[j] && i<j
-            inv += mid-low+1-i;  
-            // mid-low+1 = no. of elems in left sub-array(sorted)
+            inv += mid+1-i;  
+            // mid+1 = no. of elems in left sub-array(sorted)
             // -i signifies if a[i]>a[j] so is true for i+1,i+2,...,mid as left sub-array is sorted
 
             j++; 
@@ -76,7 +76,7 @@ int mergeSort(int A[], int low, int high){
 int main()
 {
     // int A[] = {3,2,1};
-    int A[] = {3,5,6,9,1,2,7,8};
+    int A[] = { 1, 20, 6, 4, 5 };
     int len = sizeof(A)/sizeof(int);
 
     printArray(A, len);

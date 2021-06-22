@@ -37,13 +37,14 @@ void insertAtBottom(stack<int> &st, int elem){
     insertAtBottom(st, elem);
     st.push(topElem);
 }
+
 void reverseStack(stack<int> &st){
     if(st.empty()){
         return;
     }
     int elem = st.top();
     st.pop();
-    reverseStack(st);;
+    reverseStack(st);
     insertAtBottom(st, elem);
 }
 

@@ -46,6 +46,7 @@ void inOrderTrav(Node* n){
 };
 
 // Level-order binary tree traversal
+// Alternative -- Refer below better left/right view of the tree code
 void levelOrderTrav(Node* root){
     if(root==NULL){
         cout<<"No Node present!"<<endl;

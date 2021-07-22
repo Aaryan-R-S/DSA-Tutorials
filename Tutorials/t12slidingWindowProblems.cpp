@@ -2,6 +2,11 @@
 #include<cmath>
 using namespace std;
 
+// Also see "Count no of occurences of anagrams" and "last lecture" of playlist of Aditya verma at
+// https://www.youtube.com/playlist?list=PL_z_8CaSLPWeM8BDJmIYDaoQ5zuwyxnfj
+// OR
+// https://www.geeksforgeeks.org/count-occurrences-of-anagrams/
+
 // Find sum of subarray of len k from arr of size n with property of having max sum less than X
 int maxSumSubArr(int arr[], int n, int k, int x){
     int maxSum = 0, sum = 0;

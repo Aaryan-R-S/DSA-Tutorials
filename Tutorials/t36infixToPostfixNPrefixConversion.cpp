@@ -43,7 +43,7 @@ string infixToPostfix(string s){
             }
         }
         else{
-            while (!st.empty() && prec(st.top()) > prec(s[i]) )
+            while (!st.empty() && prec(st.top()) >= prec(s[i]) )
             {
                 result += st.top();
                 st.pop();
@@ -83,8 +83,8 @@ string infixToPrefix(string s){
             }
         }
         else{
-            // difference here >=
-            while (!st.empty() && prec(st.top()) >= prec(s[i]) )
+            // difference here > not >=
+            while (!st.empty() && prec(st.top()) > prec(s[i]) )
             {
                 result += st.top();
                 st.pop();
@@ -105,5 +105,7 @@ int main()
 {
     cout<<infixToPostfix("(a-b/c)*(a/k-l)")<<endl;
     cout<<infixToPrefix("(a-b/c)*(a/k-l)")<<endl;
+    cout<<infixToPostfix("a-b/c*d")<<endl;
+    cout<<infixToPrefix("a-b/c*d")<<endl;
     return 0;
 }

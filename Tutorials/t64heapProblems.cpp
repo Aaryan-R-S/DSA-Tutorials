@@ -2,6 +2,11 @@
 #define pii pair<int, int>
 using namespace std;
 
+// --REFER ADITYA VERMA PLAYLIST ALSO--
+// Identification: Find kth smallest/closest or largest/frequent
+// Make heaap of size k (smallest=maxheap and largest=minheap) pop elems if size of heaps get larger than k then at the last you have desired k elems left in heap
+// Time complexity = O(n*logk) not (O(n*logn)) as heap max size is k
+
 // Use STL for constructing maxHeap and minHeap
 void STLHeap(){
     priority_queue<int, vector<int>> maxHeap;

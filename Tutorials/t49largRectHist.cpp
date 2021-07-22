@@ -2,6 +2,7 @@
 using namespace std;
 
 // Find the largest rectangle that can be formed from histogram of each bar's width as 1 and height represented as an array
+// Also refer Aditya Verma's approach!
 
 int get_max_rec(vector<int> v){
     stack<int> st;

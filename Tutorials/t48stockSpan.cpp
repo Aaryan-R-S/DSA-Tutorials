@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// Also refer Aditya Verma's Approach of NGL, NGR, NSL, NSR 
+
 vector<int> stockSpan(vector<int> prices){
     vector<int> res;
     stack<pair<int, int>> st;

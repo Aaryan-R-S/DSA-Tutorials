@@ -5,7 +5,7 @@ using namespace std;
 // But some nums are missing and some other nums (range from 1 to N) are placed in place of them
 // Task is to report duplicates and missing nums
 
-// First approach is to use map that will take O(n) space and time complexity
+// First approach is to use map that will take O(n) both space and time complexity
 // 1 5 4 4 3
 // e.g. myMap[4] = 2 && myMap[2] = 0; so duplicate is 4 and missing is 2
 

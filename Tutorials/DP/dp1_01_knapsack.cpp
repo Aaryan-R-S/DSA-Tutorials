@@ -150,8 +150,9 @@ int min_subset_diff_tabulaltion(int arr[], int n){
     int sum_till = sum/2;
     while(sum_till>=0){
         if(dp2[n][sum_till]){
-            return (sum-(2*sum_till)); 
+            return abs(sum-(2*sum_till)); 
         }
+        sum_till--;
     }
 }
 

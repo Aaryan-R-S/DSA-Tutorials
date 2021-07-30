@@ -78,6 +78,7 @@ void levelOrderTrav(Node* root){
 }
 
 // Sum of all nodes at kth level
+// Alternative -- Refer below better left/right view of the tree code
 int sumAtLevel(Node* root, int k){
     int level = 0;
     int sum = 0;
@@ -153,6 +154,7 @@ int diameter(Node* n){
 }
 
 // Diameter of a binary tree - O(n)
+// Also refer t70 maxPathSum technique or Aditya Verma
 int diameterFast(Node* n, int* height){
     if(n==NULL){
         *height = 0;

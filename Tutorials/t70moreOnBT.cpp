@@ -195,12 +195,12 @@ int nodesAtK(Node* root, int target, int k){
     return -1;
 }
 
-// Find max path sum possible
+// Find max path sum possible from any node to any node
 int maxPathSumUtil(Node* root, int &ans){
     if(root==NULL){
         return 0;
     }
-
+    // returns path sum till that node only from any node
     int pathLeft = maxPathSumUtil(root->left, ans);
     int pathRight = maxPathSumUtil(root->right, ans);
 
@@ -213,6 +213,26 @@ int maxPathSumUtil(Node* root, int &ans){
 }
 
 int maxPathSum(Node* root){
+    int ans = INT_MIN;
+    maxPathSumUtil(root, ans);
+    return ans;
+}
+
+// Find max path sum possible from the leaf to leaf node
+int maxPathSumUtil2(Node* root, int &ans){
+    if(root==NULL){
+        return 0;
+    }
+    // returns max path sum till that node only from the leaf node
+    int pathLeft = maxPathSumUtil(root->left, ans);
+    int pathRight = maxPathSumUtil(root->right, ans);
+
+    ans = max(ans, root->data + pathLeft + pathRight);
+
+    return max(pathLeft + root->data, pathRight + root->data);
+}
+
+int maxPathSum2(Node* root){
     int ans = INT_MIN;
     maxPathSumUtil(root, ans);
     return ans;

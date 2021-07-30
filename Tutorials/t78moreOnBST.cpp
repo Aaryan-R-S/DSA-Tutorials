@@ -172,11 +172,11 @@ void correctBST(Node* root){
 
     calcPointers(root, &first, &mid, &last, &prev);
 
-    // case 1 - not adjacent in preorder
+    // case 1 - not adjacent in inorder
     if(first && last){
         swap(&(first->data), &(last->data));
     }
-    // case 2 - adjacent in preorder
+    // case 2 - adjacent in inorder
     else if(first && mid){
         swap(&(first->data), &(mid->data));
     }

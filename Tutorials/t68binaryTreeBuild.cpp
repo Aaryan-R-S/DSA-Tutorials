@@ -56,6 +56,7 @@ int search(int inOrder[], int start, int end, int curr){
     return -1;
 }
 
+// Binary Tree Build -----
 Node* buildTreePre(int preOrder[], int inOrder[], int start, int end){
     static int index = 0;
 
@@ -102,8 +103,48 @@ Node* buildTreePos(int posOrder[], int inOrder[], int start, int end){
     return n;
 }
 
+// BST Build -------
+Node* buildBSTfromPre(int preOrder[], int start, int end){
+    if(start > end){
+        return NULL;
+    }
+    Node* n = createNode(preOrder[start]);
+    if(start==end){
+        return n;
+    }
+    int i;
+    for(i=start; i<=end; i++){
+        if(preOrder[i] > n->data){
+            break;
+        }
+    }
+    n->left = buildBSTfromPre(preOrder, start+1, i-1);
+    n->right = buildBSTfromPre(preOrder, i, end);
+    return n;
+}
+
+Node* buildBSTfromPos(int posOrder[], int start, int end){
+    if(start > end){
+        return NULL;
+    }
+    Node* n = createNode(posOrder[end]);
+    if(start==end){
+        return n;
+    }
+    int i;
+    for(i=end; i>=start; i--){
+        if(posOrder[i] < n->data){
+            break;
+        }
+    }
+    n->right = buildBSTfromPos(posOrder, i+1, end-1);
+    n->left = buildBSTfromPos(posOrder, start, i);
+    return n;
+}
+
 int main()
 {
+    // ------------------- FOR BT -------------------------
     int preOrder[] = {7,4,1,2,9,5,0,8,3};
     int inOrder[] = {1,4,9,2,7,8,0,5,3};
     int posOrder[] = {1,9,2,4,8,0,3,5,7};
@@ -116,6 +157,18 @@ int main()
     inOrderTrav(rootPos);
     cout<<endl;
 
+    // ------------------- FOR BST ------------------------
+    int preOrderBST[] = {3,1,2,5,4,6};
+    int inOrderBST[] = {1,2,3,4,5,6};
+    int posOrderBST[] = {2,1,4,6,5,3};
+
+    Node* rootPreBST = buildBSTfromPre(preOrderBST, 0, 5);
+    inOrderTrav(rootPreBST);
+    cout<<endl;
+
+    Node* rootPosBST = buildBSTfromPos(posOrderBST, 0, 5);
+    inOrderTrav(rootPosBST);
+    cout<<endl;
 
     return 0;
 }

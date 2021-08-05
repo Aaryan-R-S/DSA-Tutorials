@@ -2,7 +2,7 @@
 #include<limits.h>
 using namespace std;
 
-// For heapify O(logn) and we call it two times for each elem so O(2n*logn) = )(n*logn)
+// For heapify O(logn) and we call it two times for each elem so O(2n*logn) = O(n*logn)
 // So total Time complexity =  O(n*log(n)) 
 // Heapify for Max heap - Ascending order
 // Heapify for Min heap - Descending order

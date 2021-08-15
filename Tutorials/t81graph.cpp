@@ -101,7 +101,8 @@ void bfs(){
     cout<<"BFS"<<endl;
 
     vi vis(n+1, 0);
-    
+
+    // Can use a for-loop in case of disconnected components
     queue<int> q;
     q.push(1);
     vis[1] = 1;
@@ -175,6 +176,7 @@ void topological(){
     queue<int> q;
     for (int i = 0; i < n; i++)
     {
+        // there may be a case when indegree=1 as a least indegree so you can use a while loop to loop until you don't push someting to queue and then use that minimum indegree to again push in below loop
         if(indeg[i]==0){
             q.push(i);
         }

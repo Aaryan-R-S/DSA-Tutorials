@@ -69,7 +69,7 @@ void detectCycleUndirect(){
 }
 
 // FOR WEIGHTED & UNDIRECTED & CONNECTED GRAPH
-// Graph = G(V,E) where V = no of vertices and E = no of edges
+// Graph = G(V,E) where |V| = no of vertices and |E| = no of edges
 // Spanning tree = Tree that contains all the vertices of its graph but edges may be less than or equal to that in its graph 
 // MST = G'(V',E') where V' = V and E' = V-1  or E' is subset of E
 // Cost of ST = cost of the spanning tree is the sum of the weights of all the edges in the tree
@@ -117,6 +117,7 @@ void kruskal(){
 }
 
 // Greedy algo to find the MST
+// Also refer Jenny's lecture
 void prims(){
     int n, m; cin>>n>>m;
     vvp adj(n);
@@ -182,6 +183,7 @@ void dijkstra(){
         auto x = *s.begin();
         s.erase(x);
         for(auto i:graph[x.second]){
+            // dist[neighbour] > dist[curr] + edge_wt
             if(dist[i.first]>dist[x.second]+i.second){
                 s.erase({dist[i.first], i.first});   // if not present i.e. running first time it won't give any error unlike python's set
                 dist[i.first] = dist[x.second]+i.second;
@@ -232,7 +234,7 @@ void bellmanFord(){
             break;
         }
         else if(i==n-1){
-            cout<<"Negative Weighted Cycle; Solution is wrong!"<<endl;
+            cout<<"Negative Weighted Cycle; Solution might be wrong!"<<endl;
         }
     }
     // if after n-1 pass i.e. in nth pass the value still changes it means that graph contains -ve wt cycle

@@ -15,7 +15,8 @@ bool isCycle(int src, vvi &adj, vi &vis, int parent){
                 return true;
             }
             else{
-                return isCycle(i, adj, vis, src);
+                if(isCycle(i, adj, vis, src))
+                    return true;
             }
         }
     }
@@ -57,7 +58,8 @@ bool isCycle(int src, vvi &adj, vi &vis, vi &stack){
             return true;
         }
         if(!vis[i]){
-            return isCycle(i, adj, vis, stack);
+            if(isCycle(i, adj, vis, stack))
+                return true;
         }
     }
     stack[src] = 0;
@@ -164,7 +166,8 @@ bool isBipartite(int idx, vvi &adj, vi &vis){
     for (auto i : adj[idx])
     {
         if(vis[i]==-1){
-            return isBipartite(i, adj, vis);
+            if(!isBipartite(i, adj, vis))
+                return false;
         }
     }
     return true;

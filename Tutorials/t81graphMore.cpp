@@ -135,6 +135,7 @@ void components(){
 }
 
 // Bipartite graph --------------------------------------------------
+// ALT: CHECK GFG
 // able to color graph in two colors only such that each x colored node has y colored nodes only and vice-versa
 // OR graph without any odd length cycles 
 bool isBipartite(int idx, vvi &adj, vi &vis){

@@ -75,6 +75,14 @@ void detectCycleUndirect(){
 // Cost of ST = cost of the spanning tree is the sum of the weights of all the edges in the tree
 // Minimum Spanning tree (MST) = min cost ST
 
+
+// FOR SEM -------------------------------------
+// KRUSKAL - O(E*logE) -- Refer gfg for implementation in java only
+// PRIMS + DIJKSTRA - O(V^2) in adj. matrix (preferred) & O(E*log(V)) using binary heaps in adj. list -- Refer gfg for implementation (both are almost same) -- https://www.geeksforgeeks.org/prims-minimum-spanning-tree-mst-greedy-algo-5/
+// BELLMANFORD - O(E*(V-1)) -- Using adj. list refer GFG (Kruskal's) for edge implementation
+// FLOYD WARSHALL - O(V^3) -- Use three loops only
+
+
 // Kruskal's Algorithm ------------------------------------------------------------
 // Time complexity - O(E*logV) or O(E*logE) (sorting period)
 // Space complexity - O(E+V)
@@ -162,7 +170,7 @@ void prims(){
     cout<<costMST<<endl;
 }
 
-// single src dist algo -- works for both directed and undirected graphs but not for -ve edge wt OR -ve wt cycle
+// Single src dist algo -- works for both directed and undirected graphs but not for -ve edge wt OR -ve wt cycle
 void dijkstra(){
     int n,m; cin>>n>>m;
 
@@ -225,7 +233,7 @@ void bellmanFord(){
             int u = i[0];
             int v = i[1];
             int w = i[2];
-            if(dist[v] > w+dist[u]){
+            if(dist[v] > w+dist[u]){    // given dist[u] is not infinity
                 change = true;
                 dist[v] = w+dist[u];
             }
@@ -260,7 +268,9 @@ void floydWarshall(){
     for (int k = 0; k < n; k++){
         for (int i = 0; i < n; i++){
             for (int j = 0; j < n; j++){
-                dist[i][j] = min(dist[i][j], dist[i][k]+dist[k][j]);
+                if ((dist[i][j] > (dist[i][k] + dist[k][j])) && (dist[k][j] != INF && dist[i][k] != INF)){
+                    dist[i][j] = dist[i][k] + dist[k][j];
+                }
             }
         }
     }

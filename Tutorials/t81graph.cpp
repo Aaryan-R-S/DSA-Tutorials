@@ -158,6 +158,7 @@ void dfsPos(vector<vi> &l, vi &vis, stack<int> &s, int node = 1){
 // undirected or cyclic graphs do not have topological sort
 // it implies if during topological sort anyone doesn't traverse all the nodes exactly once then cycle exists
 // topological sort is not unique
+// REFER GFG for implementation - DFS - O(V+E)
 void topological(){
     int n, m;  // no of nodes - n and no of edges - m
     cin>>n>>m;

@@ -136,7 +136,7 @@ int count_subsets_tabulation(int arr[], int n, int sum){
 // E. Minimum Subset Difference:
 // Find a partition whose difference of sum is minimum and report this minimum difference.
 
-int min_subset_diff_tabulaltion(int arr[], int n){
+int min_subset_diff_tabulation(int arr[], int n){
     // s2-s1 must be minimum
     // but s2+s1 = sum
     // so sum-s1-s1 = sum-(2*s1) must be minimum
@@ -201,7 +201,7 @@ int count_subset_diff(int arr[], int n, int diff){
             }
         }
     }
-    return pow(2, zeroCnt)+dp4[n][sum];
+    return pow(2, zeroCnt) * dp4[n][sum];
 }
 
 

@@ -98,8 +98,8 @@ int min_coin_change_tabulation(int coin[], int sum, int n){
                 dp4[i][j] = INT_MAX-1;
             }
             else if(i==1){
-                if(j%coin[0]==0){
-                    dp4[i][j] = j/coin[0];
+                if(j%coin[i-1]==0){
+                    dp4[i][j] = j/coin[i-1];
                 }
                 else{
                     dp4[i][j] = INT_MAX-1;

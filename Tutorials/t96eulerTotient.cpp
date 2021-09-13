@@ -2,7 +2,7 @@
 using namespace std;
 
 // Refer Apna College -- Lect 37.3
-// Totient of n or phi(n) = no of coprimes 'm' where (1<=m<n)
+// Totient of n or phi(n) = no of coprimes 'm' till n where (1<=m<n)
 
 int main()
 {

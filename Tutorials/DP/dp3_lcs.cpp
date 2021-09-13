@@ -100,7 +100,7 @@ string print_lcs(string s1, string s2, int m, int n){
 // Deletions = s1-lcs
 
 // 6. Longest Palindromic Subsequence (LPS):
-// lcs(s1, reverse(s1.begin(), s1.end()), n, n)
+// lps = lcs(s1, reverse(s1.begin(), s1.end()), n, n)
 
 // 7. Min no of deletions to convert a string s1 to palindrome:
 // Deletions = s1 - lps (see Point-6)

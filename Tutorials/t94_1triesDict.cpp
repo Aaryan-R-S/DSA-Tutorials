@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// Application: Autocomplete
 class Trie{
 public:
     class Node{
@@ -77,6 +78,8 @@ public:
         return;
     }
 };
+
+// Improvement Node also store the word formed till it
 
 int main()
 {

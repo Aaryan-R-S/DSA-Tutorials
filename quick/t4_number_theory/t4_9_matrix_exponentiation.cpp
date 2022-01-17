@@ -9,8 +9,8 @@ using namespace std;
 
 // Recursion -- O(2^n)
 // DP -- O(n)
-// To calculate fib(n) in O(log(n))
-// Using matrix exponentiation see Apna College Vid
+// Matrix Exponentiation -- O(log(n))
+// Refer - https://youtu.be/oBH9dH6KGLM
 
 // fib(n)    =  [1 1]^(n-2)   X   fib(2)
 // fib(n-1)  =  [1 0]         X   fib(1)
@@ -51,8 +51,7 @@ vvi matrixExponentiate(vvi &a, int n){
     return ans;
 }
 
-// To calculate sum of fib series till fib(n) in O(log(n))
-// See sum of n fin nums Apna College Vid
+// Calculate sum of fib series till fib(n) in O(log(n))
 // sum(n)    =  [1 1 1]^(n-2)   X   sum(2)
 // fib(n)    =  [0 1 1]         X   fib(2)
 // fib(n-1)  =  [0 1 0]         X   fib(1)

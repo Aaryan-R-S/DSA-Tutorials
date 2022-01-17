@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// Time complexity same as Euclidean Algorithm - O(log(min(a,b)))
+
 // Diophantine Equations--
 // Polynomial equations for which integral solution exists e.g. ax+by=c where
 // GCD of a, b has properety that -- gcd(a,b) divides c then
@@ -40,10 +42,11 @@ int main()
     int a, b;
     cin>>a>>b;
 
-    // triplet ans = extendedEuclidAlgo(a,b);
-    // cout<<ans.gcd<<" "<<ans.x<<" "<<ans.y<<endl;
+    triplet ans = extendedEuclidAlgo(a,b);
+    cout<<ans.gcd<<" "<<ans.x<<" "<<ans.y<<endl;
 
     cout<<multModInverse(a,b)<<endl;
+    cout<<multModInverse(b,a)<<endl;
 
     return 0;
 }

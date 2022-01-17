@@ -1,0 +1,9 @@
+`Problems`
+- https://www.interviewbit.com/problems/monkeys-and-doors
+- https://www.interviewbit.com/problems/jelly-beans-jars
+- https://www.interviewbit.com/problems/cross-the-bridge
+- https://www.interviewbit.com/problems/make-a-statement
+- https://www.interviewbit.com/problems/prisoners-and-poison
+- https://www.interviewbit.com/problems/measure-milk-by-cans
+- https://www.interviewbit.com/problems/divide-gold-bar
+- https://www.interviewbit.com/problems/eggs-and-building

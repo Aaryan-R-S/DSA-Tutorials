@@ -1,0 +1,10 @@
+`Problems`
+- https://www.interviewbit.com/problems/reverse-integer/
+- https://www.interviewbit.com/problems/rearrange-array/
+- https://www.interviewbit.com/problems/power-of-two-integers/
+- https://www.interviewbit.com/problems/sorted-permutation-rank/
+- https://www.interviewbit.com/problems/addition-without-summation/
+- https://www.interviewbit.com/problems/highest-score/
+- https://www.interviewbit.com/problems/divisible-by-60/
+- https://www.interviewbit.com/problems/sum-of-pairwise-hamming-distance/
+- https://www.interviewbit.com/problems/step-by-step/

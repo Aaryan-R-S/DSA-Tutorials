@@ -20,7 +20,7 @@ int updateBit(int n, int i, int b){
 }
 
 bool isPowTwo(int n){
-    return (n && !(n&(n-1)));
+    return (n&(n-1) == 0);
 }
 
 // n&(n-1) has same bits as n except the bits after rightmost set bit
@@ -38,6 +38,7 @@ int noOfOnes(int n){
     return count;
 }
 
+// Bitmasking Technique -- given n element subset, generate all the subsets (precisely 2^n) using bits of numbers from i = 0 to 2^n (or 1<<n)
 void subsets(char arr[], int n){
     for (int i = 0; i < (1<<n); i++)
     {

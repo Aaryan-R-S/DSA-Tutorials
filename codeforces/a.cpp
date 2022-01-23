@@ -73,14 +73,11 @@ void swap(int *a, int *b){
 // Main Program
 void solve(){
     in(n);
-
     vi a(n);
-    
-    rep(i, 0, n){
+    rep(i,0,n){
         cin>>a[i];
     }
 
-    
 }
 
 // Driver Program 

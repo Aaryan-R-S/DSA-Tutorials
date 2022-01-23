@@ -1,4 +1,4 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
 // EUCLID PRINCIPLE ->
@@ -32,6 +32,13 @@ int lcm(int a, int b){
     return a / gcd(a,b) * b;
 }
 
+
+// Simplify a fraction
+pair<int,int> simplify_fraction(pair<int,int> a){
+    int gcd = __gcd(a.first, a.second);
+    return make_pair(a.first/gcd, a.second/gcd);
+};
+
 int main()
 {
     int a, b;
@@ -39,6 +46,11 @@ int main()
 
     cout<<gcd(a, b)<<endl;
     cout<<lcm(a, b)<<endl;
+
+    pair<int,int> p = make_pair(12,18);
+    cout<<p.first<<"/"<<p.second<<endl;
+    p = simplify_fraction(p);
+    cout<<p.first<<"/"<<p.second<<endl;
 
     return 0;
 }

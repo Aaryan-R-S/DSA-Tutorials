@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// Indian Coin change problem
+// (Q1) Indian Coin change problem
 int minCoins(vector<int> arr, int amt){
     int num = 0;
     sort(arr.begin(), arr.end(), greater<int>());
@@ -13,7 +13,7 @@ int minCoins(vector<int> arr, int amt){
     return num;
 }
 
-// Activity selection problem - calculate max no of activites that can be selected without overlapping
+// (Q2) Activity selection problem - calculate max no of activites that can be selected without overlapping
 int selection(vector<vector<int>> &v, int n){
     sort(v.begin(), v.end(), [&](vector<int> &a, vector<int> &b){
         return a[1] < b[1];
@@ -32,7 +32,7 @@ int selection(vector<vector<int>> &v, int n){
     return take;
 }
 
-// Fractional knapsack - same as that of recursion one but fraction is also allowed
+// (Q3) Fractional knapsack - same as that of recursion one but fraction is also allowed
 int fracKnapsack(vector<pair<int,int>> &v, int w){
     sort(v.begin(), v.end(), [&](pair<int,int> &p1, pair<int,int> &p2){
         double v1 = (double) p1.first/p1.second;
@@ -57,7 +57,7 @@ int fracKnapsack(vector<pair<int,int>> &v, int w){
     return ans;
 }
 
-// You are given an arr of n files with their computation times, choose any two files add their time and append it to the list of the computation times , repeat the process to obtain min comp. time at end
+// (Q4) You are given an arr of n files with their computation times, choose any two files add their time and append it to the list of the computation times , repeat the process to obtain min comp. time at end
 int minTime(vector<int> v){
     priority_queue<int, vector<int>, greater<int>> minHeap;
     for (int i = 0; i < v.size(); i++)
@@ -76,7 +76,7 @@ int minTime(vector<int> v){
     return ans;
 }
 
-// Expedi -- see apna college vid 148 
+// (Q5) Expedi -- see apna college vid 148 
 // [https://www.youtube.com/watch?v=so1E0lSytz0&list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ&index=148]
 void expedi(){
     int t; cin>>t;  // test cases
@@ -138,7 +138,7 @@ void expedi(){
 
 }
 
-// Max and min diff -- divide given array of siz 2n to two arrays each of size n to get max and min abs diff b/w elems i.e.  max and min: Sigma abs(A[i]-B[i]) from 0 to n
+// (Q6) Max and min diff -- divide given array of siz 2n to two arrays each of size n to get max and min abs diff b/w elems i.e.  max and min: Sigma abs(A[i]-B[i]) from 0 to n
 void diff(){
     int n; cin>>n;
     vector<int> v(n);
@@ -156,6 +156,16 @@ void diff(){
     }
     cout<<mn<<" "<<mx<<endl;
 }
+
+// `Problems`:
+// - https://www.interviewbit.com/problems/highest-product/
+// - https://www.interviewbit.com/problems/gas-station/
+// - https://www.interviewbit.com/problems/distribute-candy/
+// - Help for above problem [https://youtu.be/PzBYQA6FshA]
+// - https://www.interviewbit.com/problems/seats/
+// - Help for above problem [https://youtu.be/SK2ypa7poKg]
+// - https://www.interviewbit.com/problems/meeting-rooms/
+// - https://www.interviewbit.com/problems/disjoint-intervals/
 
 int main()
 {

@@ -126,6 +126,12 @@ int uniqueThree(int arr[], int n){
 
 // `Problems`
 // - https://www.interviewbit.com/problems/different-bits-sum-pairwise/
+// - https://www.interviewbit.com/problems/min-xor-value/
+// - https://www.interviewbit.com/problems/xor-ing-the-subarrays/
+// - https://www.interviewbit.com/problems/count-total-set-bits/ 
+// - Help for above problem - [https://youtu.be/g6OxU-hRGtY]
+// - https://www.interviewbit.com/problems/palindromic-binary-representation/
+// - Help for above problem - [https://youtu.be/QYoWR8hDCyQ]
 
 int main()
 {

@@ -10,7 +10,7 @@ void rev_str(string s){
 }
 
 void replace_Pi(string s){
-    if(s.length()==0){
+    if(s.length()==0 || s.length()==1){
         return;
     }
     if(s[0]=='p' && s[1]=='i'){

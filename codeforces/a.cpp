@@ -77,7 +77,7 @@ void solve(){
     rep(i,0,n){
         cin>>a[i];
     }
-
+    
 }
 
 // Driver Program 

@@ -2,8 +2,7 @@
 using namespace std;
 
 // LINEAR PATH STARTING FROM S TO E. FIND NO. OF PATHS POSSIBLE WHERE EACH STEPS LENGTH RANGES FROM 1 TO 6
-int countPath(int s, int e)
-{
+int countPath(int s, int e){
     if (s == e)
     {
         return 1;
@@ -22,9 +21,8 @@ int countPath(int s, int e)
     return count;
 }
 
-// MAZE STARTING FROM (0,0) TO (M,N) FIND NO. OF PATHS POSSIBLE WHERE EACH STEPS LENGTH IS 1 EITHER IN DOWN OR RIGHT DIRECTOIN
-int path(int m, int n)
-{
+// MAZE STARTING FROM (1,1) TO (M,N) FIND NO. OF PATHS POSSIBLE WHERE EACH STEPS LENGTH IS 1 EITHER IN DOWN OR RIGHT DIRECTOIN
+int path(int m, int n){
     if (m == 1 || n == 1)
     {
         return 1;
@@ -34,18 +32,15 @@ int path(int m, int n)
 
 // GIVE A BOARD OF SIZE 2XN AND TILE OF SIZE 2X1. FIND NO OF WAYS TO TILE THE GIVEN BOARD USING THESE TILES
 // Order doesn't matter that is for n=2 ans should be 1 not 2 as we can rotate tile 90deg to get same configuration
-int tilingWays(int n)
-{
-    if (n == 1 || n == 0)
-    {
+int tilingWays(int n){
+    if (n == 1 || n == 0){
         return n;
     }
     return tilingWays(n - 1) + tilingWays(n - 2);
 }
 
 // FIND THE NO OF WAYS IN WHICH N FRIENDS CAN REMAIN SINGLE OR CAN BE PAIRED UP
-int pairUp(int n)
-{
+int pairUp(int n){
     if (n == 0 || n == 1 || n == 2)
     {
         return n;
@@ -54,8 +49,7 @@ int pairUp(int n)
 }
 
 // PUT N ITEMS WITH GIVEN WEIGHT AND VALUE IN A KNAPSACK OF CAPACITY W TO GET THE MAX TOTAL VALUE IN THE KNAPSACK
-int knapsack(int val[], int wt[], int n, int W)
-{
+int knapsack(int val[], int wt[], int n, int W){
     if (W == 0 || n == 0)
     {
         return 0;

@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std;
 
+// Advance Version  - https://www.interviewbit.com/problems/nqueens/
+
 // Need to check only same col, upper left and upper right diagonal
 bool isSafe(int** arr, int x, int y, int n){
     for (int i = 0; i < x; i++)

@@ -60,6 +60,10 @@ void permutationOfIntArr(vector<int> &v, int index, vector<vector<int>> &ans){
 
 // [Important]
 // Q4) Permutation of integer (may not be distinct) arrays  ----------------------------------------
+// Three changes:
+// 1) Note v is NOT passed as reference as we want array to be remain sorted
+// 2) Also second swap(v[i], v[index]) is not done so as to prevent duplicates
+// 3) If element being swapped are equal then continue
 void helper(vector<int> v, vector<vector<int>> &answer, int index){
     if (index == v.size()){
         answer.push_back(v);
@@ -297,6 +301,14 @@ int coinGameDP(int arr[], int l, int r, vector<vector<int>> &dp){
     return dp[l][r];
 };
 
+// Q18) Josephus Problem ----------------------------
+int josephus(int n, int k){
+    if(n==1){
+        return 0;
+    }
+    return (k+josephus(n-1, k))%n;
+}
+
 int main(){
     // cout<<pow(3, 10)<<endl;      // 11 steps
     // cout<<powRec(3, 10, 1e9+7)<<endl;  // 4 steps
@@ -322,24 +334,24 @@ int main(){
     //     cout<<endl;
     // }
 
-    int n;
-    cin>>n;
-    vector<int> nums(n);
-    for (auto &i : nums)
-    {
-        cin>>i;
-    }
-    vector<vector<int>> answer = permute(nums);
-    // vector<vector<int>> answer;
-    // permutationOfIntArr(nums, answer);
-    for (auto &k : answer)
-    {
-        for (auto &i : k)
-        {
-            cout<<i<<" ";
-        }
-        cout<<endl;
-    }
+    // int n;
+    // cin>>n;
+    // vector<int> nums(n);
+    // for (auto &i : nums)
+    // {
+    //     cin>>i;
+    // }
+    // vector<vector<int>> answer = permute(nums);
+    // // vector<vector<int>> answer;
+    // // permutationOfIntArr(nums, answer);
+    // for (auto &k : answer)
+    // {
+    //     for (auto &i : k)
+    //     {
+    //         cout<<i<<" ";
+    //     }
+    //     cout<<endl;
+    // }
 
     // cout<<countPath(0, 3)<<endl;
     // cout<<path(200, 2)<<endl;
@@ -371,5 +383,7 @@ int main(){
     // vector<vector<int>> dp(len, vector<int>(len, -1));
     // cout<<coinGameDP(arr, 0, len-1, dp)<<endl;
 
+    // cout<<josephus(100, 2)<<endl;
+    
     return 0;
 }

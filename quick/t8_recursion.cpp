@@ -160,24 +160,6 @@ int knapsackRec(int val[], int wt[], int n, int W){
     );
 }
 
-int knapsackGreed(vector<pair<int,int>> &v, int w){
-    sort(v.begin(), v.end(), [&](pair<int,int> &p1, pair<int,int> &p2){
-        double v1 = (double) p1.first/p1.second;
-        double v2 = (double) p2.first/p2.second;
-        return v1>v2;
-    });
-
-    int ans = 0;
-    for (int i = 0; i < v.size(); i++)
-    {
-        if(w >= v[i].second){
-            ans += v[i].first;
-            w -= v[i].second;
-        }
-    }
-    return ans;
-}
-
 // Q10) ---------------------------------------------
 void rev_str(string s){
     if(s.length()==0){
@@ -361,12 +343,6 @@ int main(){
     // int val[] = {100,50,150};
     // int wt[] = {10,20,30};
     // cout<<knapsackRec(val, wt, 3, 50)<<endl;
-    
-    // vector<pair<int,int>> v;
-    // for (int i = 0; i < 3; i++){
-    //     v.push_back(make_pair(val[i], wt[i]));
-    // }
-    // cout<<knapsackGreed(v, 50)<<endl;
 
     // rev_str("binod");
     // replace_Pi("pipokmcwpmcpoaurppincacfcniuwfn");

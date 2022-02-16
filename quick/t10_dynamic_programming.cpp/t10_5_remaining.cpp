@@ -1,6 +1,40 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// `Problems`
+// - https://www.interviewbit.com/problems/longest-increasing-subsequence/
+// - https://www.interviewbit.com/problems/distinct-subsequences/
+// - https://www.interviewbit.com/problems/ways-to-decode/
+// [Help for above problem] https://youtu.be/jFZmBQ569So
+// - Buy and sell stocks (6 videos) 
+// - https://www.youtube.com/watch?v=4YjEHmw1MX0&list=PL-Jc9J83PIiG8fE6rj9F5a6uyQ5WPdqKy&index=30
+// - https://www.interviewbit.com/problems/best-time-to-buy-and-sell-stock-atmost-b-times/
+// - https://www.interviewbit.com/problems/palindrome-partitioning-ii/
+// - https://www.interviewbit.com/problems/regular-expression-match/
+// - https://www.interviewbit.com/problems/regular-expression-ii/
+// - https://www.interviewbit.com/problems/min-jumps-array/
+// [Help for above problem] https://www.interviewbit.com/blog/minimum-number-of-jumps/
+// - https://www.interviewbit.com/problems/edit-distance/
+// - https://www.interviewbit.com/problems/word-break/
+// - https://www.interviewbit.com/problems/word-break-ii/
+// - https://www.interviewbit.com/problems/longest-valid-parentheses/
+// - https://www.interviewbit.com/problems/interleaving-strings/
+// - https://www.interviewbit.com/problems/max-sum-without-adjacent-elements/
+// - https://www.interviewbit.com/problems/coin-sum-infinite/ [O(N) Space]
+// - https://www.interviewbit.com/problems/equal-average-partition/
+// - https://www.interviewbit.com/problems/arrange-ii/
+// - https://www.interviewbit.com/problems/sub-matrices-with-sum-zero/
+// - https://www.interviewbit.com/problems/ways-to-color-a-3xn-board/
+// - https://www.interviewbit.com/problems/tushars-birthday-party/
+// - https://www.interviewbit.com/problems/kth-manhattan-distance-neighbourhood/
+// - https://www.interviewbit.com/problems/largest-area-of-rectangle-with-permutations/
+// - https://www.interviewbit.com/problems/maximum-size-square-sub-matrix/
+// - https://www.interviewbit.com/problems/tiling-with-dominoes/
+// - https://www.interviewbit.com/problems/egg-drop-problem/
+// - https://www.interviewbit.com/problems/dice-throw/
+// - https://www.interviewbit.com/problems/merge-elements/
+// - https://www.interviewbit.com/problems/potions/
+
 // Only refer -----------------------------------------------
 // fib
 // Min squares

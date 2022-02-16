@@ -162,7 +162,7 @@ int eval_bool_mem(string s, int i, int j, bool isTrue){
         }
     }
     int ans = 0;
-    for (int k = i+1; k <= j-1; k++)    // OR k+=2
+    for (int k = i+1; k <= j-1; k++)   
     {
         int left_true = eval_bool_mem(s, i, k-1, true);
         int left_false = eval_bool_mem(s, i, k-1, false);

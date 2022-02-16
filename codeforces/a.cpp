@@ -70,6 +70,26 @@ void swap(int *a, int *b){
     *b = temp;
 }
 
+void pr(int n, int k){
+    int j = 0;
+    for(int i=1; i<=n*k; i+=2){
+        cout<<i<<" ";
+        j++;
+        if(j==k){
+            j=0;
+            cout<<endl;
+        }
+    }
+    for(int i=2; i<=n*k; i+=2){
+        cout<<i<<" ";
+        j++;
+        if(j==k){
+            j=0;
+            cout<<endl;
+        }
+    }
+}
+
 // Main Program
 void solve(){
     in(n);
@@ -90,8 +110,8 @@ int main()
 #endif
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    // int t = 1;
-    in(t);
+    int t = 1;
+    // in(t);
     while(t--){
         solve();
     }

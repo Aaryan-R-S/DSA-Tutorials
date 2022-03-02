@@ -7,6 +7,12 @@ using namespace std;
 // Make heaap of size k (smallest=maxheap and largest=minheap) pop elems if size of heaps get larger than k then at the last you have desired k elems left in heap
 // Time complexity = O(n*logk) not (O(n*logn)) as heap max size is k
 
+// `Problems`:
+// - https://www.interviewbit.com/problems/merge-k-sorted-lists/
+// - https://www.interviewbit.com/problems/lru-cache/
+// - https://www.interviewbit.com/problems/n-max-pair-combinations/ [https://youtu.be/btjG9eLNYcg]
+// - https://www.interviewbit.com/problems/ways-to-form-max-heap/ [https://youtu.be/s9hCZxjjBoE]
+
 // Use STL for constructing maxHeap and minHeap
 void STLHeap(){
     priority_queue<int, vector<int>> maxHeap;

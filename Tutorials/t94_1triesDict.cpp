@@ -1,6 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// `Problems`:
+// - https://www.interviewbit.com/problems/shortest-unique-prefix/
+// - https://www.interviewbit.com/problems/xor-between-two-arrays/
+
 // Application: Autocomplete
 class Trie{
 public:

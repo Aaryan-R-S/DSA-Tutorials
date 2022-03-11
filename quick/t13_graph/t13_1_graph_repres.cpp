@@ -124,6 +124,9 @@ void bfs(){
     cout<<endl;
 }
 
+// 0-1 BFS
+// https://www.interviewbit.com/problems/min-cost-path/
+
 // DFS Traversal -----------------------------------------------------------------------
 // The Time complexity of DFS is also O(V + E) when Adjacency List is used and O(V^2) when Adjacency Matrix is used, where V stands for vertices and E stands for edges.
 // NO STACK IS REQUIRED (OPTIONAL)
@@ -142,6 +145,7 @@ void dfs(vector<vi> &l, vi &vis, stack<int> &s, int node = 1){
 };
 
 // post-order
+// NO STACK IS REQUIRED (OPTIONAL)
 void dfsPos(vector<vi> &l, vi &vis, stack<int> &s, int node = 1){    
     s.push(node);
     vis[node] = 1;

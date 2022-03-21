@@ -71,13 +71,13 @@ void swap(int *a, int *b){
 }
 
 // Main Program
-void solve(){
+void solve(int test_no){
     in(n);
     vi a(n);
     rep(i,0,n){
         cin>>a[i];
     }
-    
+
 }
 
 // Driver Program 
@@ -91,9 +91,9 @@ int main()
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     in(t);
-    t = 1;
-    while(t--){
-        solve();
+    // t = 1;
+    for(int i=1; i<=t; i++){
+        solve(i);
     }
     return 0;
 }

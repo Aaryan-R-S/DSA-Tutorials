@@ -1,9 +1,8 @@
 #include<iostream>
 using namespace std;
 
-int main()
-{
-// find sub-array of desired sum   
+void desiredSum(){
+    // find sub-array of desired sum   
     // int n;
     // cin>>n;
 
@@ -58,8 +57,10 @@ int main()
     //     }
     // }
     
-    
-// find min index of first repeating element   
+}
+
+void repeatingElem(){
+    // find min index of first repeating element   
     int n;
     cin>>n;
 
@@ -94,6 +95,10 @@ int main()
     else{
         cout<<minIndex<<endl;
     }
+}
 
+int main()
+{
+  
     return 0;
 }

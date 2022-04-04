@@ -4,6 +4,13 @@
 #include<algorithm>
 using namespace std;
 
+// 1. Infix to Postfix
+// 2. Postfix eval value
+// 3. Create a binary tree using infix/prefix/postfix [Refer Jenny's Lecture]
+// 4. Tree inorder of infix = infix
+// 5. Tree preorder of infix = prefix
+// 6. Tree postorder of infix = postfix
+
 // Precedence checker
 int prec(char c){
     if(c=='^'){

@@ -77,7 +77,7 @@ void solve(int test_no){
     rep(i,0,n){
         cin>>a[i];
     }
-
+    
 }
 
 // Driver Program 
@@ -91,7 +91,7 @@ int main()
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     in(t);
-    // t = 1;
+    // int t = 1;
     for(int i=1; i<=t; i++){
         solve(i);
     }

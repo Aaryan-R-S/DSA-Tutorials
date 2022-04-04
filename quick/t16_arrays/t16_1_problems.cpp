@@ -27,6 +27,15 @@ using namespace std;
 // - https://www.interviewbit.com/problems/maximum-area-of-triangle/ [https://www.geeksforgeeks.org/maximum-area-triangle-different-vertex-colors/]
 // - https://www.interviewbit.com/problems/sort-array-with-squares/
 // - https://www.interviewbit.com/problems/maximum-sum-square-submatrix/
+// - https://www.interviewbit.com/problems/merge-two-sorted-lists-ii/
+// - https://www.interviewbit.com/problems/remove-duplicates-from-sorted-array/
+// - https://www.interviewbit.com/problems/array-3-pointers/ [https://youtu.be/BlXTlC6_Xv4]
+// - https://www.interviewbit.com/problems/container-with-most-water/
+// - https://www.interviewbit.com/problems/3-sum-zero/
+// - https://www.interviewbit.com/problems/remove-duplicates-from-sorted-array-ii/
+// - https://www.interviewbit.com/problems/subarrays-with-distinct-integers/ [https://youtu.be/akwRFY2eyXs]
+// - https://www.interviewbit.com/problems/pair-with-given-difference/
+// - https://www.interviewbit.com/problems/hotel-service/
 
 // FIND INDICES OF THOSE PAIR OF ELEMENTS IN SORTED ARRAY 'A' OF LEN 'N' WHOSE SUM IS EQUAL TO 'K' 
 bool pairSum(int a[], int n, int k){

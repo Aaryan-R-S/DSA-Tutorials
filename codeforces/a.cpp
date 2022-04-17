@@ -14,6 +14,7 @@ using namespace std;
 // -1e18 < long long int < 1e18
 // %% I/O %%
 #define in(w) int w; cin>>w
+#define inll(w) ll w; cin>>w
 #define out(w, n) cout<<w<<n
 // %% Loops %%
 #define rep(i,a,b) for (int i = a; i < b; i++)
@@ -23,6 +24,7 @@ using namespace std;
 #define SIZE(v) (int)v.size()
 #define SIZEA(arr) (int)sizeof(arr)/sizeof(int)
 #define vi vector<int>
+#define vll vector<ll>
 #define vvi vector<vi>
 #define pii pair<int, int>
 #define vii vector<pair<int, int>>
@@ -64,16 +66,16 @@ template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i
 // template<class T> using oset = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 // template<class T> using muset = tree<T, null_type, less_equal<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
-void swap(int *a, int *b){
-    int temp = *a;
+void swap(ll *a, ll *b){
+    ll temp = *a;
     *a = *b;
     *b = temp;
 }
 
 // Main Program
 void solve(int test_no){
-    in(n);
-    vi a(n);
+    inll(n);
+    vll a(n);
     rep(i,0,n){
         cin>>a[i];
     }

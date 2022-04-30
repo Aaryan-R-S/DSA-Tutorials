@@ -74,12 +74,12 @@ void swap(ll *a, ll *b){
 
 // Main Program
 void solve(int test_no){
-    inll(n);
-    vll a(n);
-    rep(i,0,n){
+    inll(N);
+    vll a(N);
+    rep(i,0,N){
         cin>>a[i];
     }
-    
+    // cout<<"Case #"<<test_no<<": "<<"IMPOSSIBLE"<<endl;
 }
 
 // Driver Program 

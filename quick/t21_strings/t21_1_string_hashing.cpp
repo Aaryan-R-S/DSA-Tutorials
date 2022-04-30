@@ -13,6 +13,7 @@ using namespace std;
 // - https://www.interviewbit.com/problems/minimum-characters-required-to-make-a-string-palindromic/ [https://www.geeksforgeeks.org/minimum-characters-added-front-make-string-palindrome/] [same for appending characters at the end only - https://www.interviewbit.com/problems/minimum-appends-for-palindrome/]
 // - https://www.interviewbit.com/problems/convert-to-palindrome/
 // - https://www.interviewbit.com/problems/bulls-and-cows/
+// - https://www.interviewbit.com/problems/palindromic-time/
 
 int MOD = 1e+7;
 int base = 31;  // any no greater than 27 as a->1 not 0 (which means empty string)

@@ -11,7 +11,7 @@ using namespace std;
 // - https://www.interviewbit.com/problems/largest-number/
 // - https://www.interviewbit.com/problems/first-missing-integer/
 // - https://www.interviewbit.com/problems/n3-repeat-number/ [Moore's Voting Algorithm | https://www.geeksforgeeks.org/n3-repeated-number-array-o1-space/]
-// - https://www.interviewbit.com/problems/maximum-consecutive-gap/
+// - https://www.interviewbit.com/problems/maximum-consecutive-gap/ [https://youtu.be/wB-JSSNphI4]
 // - https://www.interviewbit.com/problems/max-distance/
 // - https://www.interviewbit.com/problems/next-permutation/
 // - https://www.interviewbit.com/problems/hotel-bookings-possible/
@@ -36,6 +36,8 @@ using namespace std;
 // - https://www.interviewbit.com/problems/subarrays-with-distinct-integers/ [https://youtu.be/akwRFY2eyXs]
 // - https://www.interviewbit.com/problems/pair-with-given-difference/
 // - https://www.interviewbit.com/problems/hotel-service/
+// - https://www.interviewbit.com/problems/triplets-with-sum-between-given-range/ [https://youtu.be/T3C7g8NohKw]
+// - https://www.interviewbit.com/problems/counting-triangles/
 
 // FIND INDICES OF THOSE PAIR OF ELEMENTS IN SORTED ARRAY 'A' OF LEN 'N' WHOSE SUM IS EQUAL TO 'K' 
 bool pairSum(int a[], int n, int k){

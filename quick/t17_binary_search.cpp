@@ -7,6 +7,8 @@ using namespace std;
 // - https://www.interviewbit.com/problems/matrix-median/ [https://youtu.be/79S7C6pvl2E]
 // - https://www.interviewbit.com/problems/woodcutting-made-easy/
 // - https://www.interviewbit.com/problems/search-in-bitonic-array/
+// - https://www.interviewbit.com/problems/simple-queries/
+// - https://www.interviewbit.com/problems/request-x-chocolates/
 
 // Given an array of size n find the k elems such that dist b/w any 2 elems is max possible
 bool isFeasible(int mid, int arr[], int n, int k){

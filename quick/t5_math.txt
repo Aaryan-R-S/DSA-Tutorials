@@ -8,3 +8,7 @@
 - https://www.interviewbit.com/problems/divisible-by-60/
 - https://www.interviewbit.com/problems/sum-of-pairwise-hamming-distance/
 - https://www.interviewbit.com/problems/step-by-step/
+- https://www.interviewbit.com/problems/city-tour/ [https://youtu.be/fUS9G-WG9SQ]
+- https://www.interviewbit.com/problems/numbers-of-length-n-and-value-less-than-k/ [https://youtu.be/MT8zeLak_bI]
+- https://www.interviewbit.com/problems/last-digit-k-count/
+- https://www.interviewbit.com/problems/leap-year/

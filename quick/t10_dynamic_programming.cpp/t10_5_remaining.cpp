@@ -34,6 +34,13 @@ using namespace std;
 // - https://www.interviewbit.com/problems/dice-throw/
 // - https://www.interviewbit.com/problems/merge-elements/
 // - https://www.interviewbit.com/problems/potions/
+// - https://www.interviewbit.com/problems/palindromic-substrings/
+// - https://www.interviewbit.com/problems/double-increasing-series/
+// - https://www.interviewbit.com/problems/queen-attack/
+// - https://www.interviewbit.com/problems/flip-array/
+// - https://www.interviewbit.com/problems/intersecting-chords-in-a-circle/
+// - https://www.interviewbit.com/problems/n-digit-numbers-with-digit-sum-s-/
+// - https://www.interviewbit.com/problems/max-edge-queries/
 
 // Only refer -----------------------------------------------
 // fib

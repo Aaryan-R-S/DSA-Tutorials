@@ -76,9 +76,12 @@ void swap(ll *a, ll *b){
 void solve(int test_no){
     inll(N);
     vll a(N);
+    // map<int,int> m;
     rep(i,0,N){
         cin>>a[i];
+        // m[a[i]]++;
     }
+
     // cout<<"Case #"<<test_no<<": "<<"IMPOSSIBLE"<<endl;
 }
 

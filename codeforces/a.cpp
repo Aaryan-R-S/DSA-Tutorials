@@ -81,7 +81,7 @@ void solve(int test_no){
         cin>>a[i];
         // m[a[i]]++;
     }
-
+    
     // cout<<"Case #"<<test_no<<": "<<"IMPOSSIBLE"<<endl;
 }
 

@@ -49,5 +49,9 @@ int main(){
     char a = 'a';
     cout<<char(a&'_')<<endl;
 
+    // Interactive Problems - write below line after every print statement
+    cout<<flush;    
+    // OR refer - [https://youtu.be/iNHbQ0diNZc]
+
     return 0;
 }

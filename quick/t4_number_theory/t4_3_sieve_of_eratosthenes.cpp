@@ -81,7 +81,7 @@ void primeFactorN(int n){
     }cout<<endl;
 }
 
-// Q(2.1) Print divisors of numbers (with their sum) till N - O(n*log(log(n)))
+// Q(2.1) Print divisors of numbers (with their sum) till N - O(n^2))
 void divisorsSieve(int n){
     vector<int> divs[n+1];
     vector<int> sums(n+1);

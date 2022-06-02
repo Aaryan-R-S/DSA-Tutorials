@@ -38,8 +38,8 @@ Each of the above conditions can be interpreted as:
     of f(n) will become polynomially larger than n^logb(a). Thus, the time complexity is oppressed by the cost of f(n).
 
 The master theorem cannot be used if:
--> T(n) is not monotone. eg. T(n) = sin n
--> f(n) is not a polynomial. eg. f(n) = 2n
+-> T(n) is not monotone. eg. T(n) = sin(n)
+-> f(n) is not a polynomial. eg. f(n) = 2^n
 -> a is not a constant. eg. a = 2n
 -> a < 1
 

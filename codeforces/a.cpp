@@ -74,9 +74,10 @@ void swap(ll *a, ll *b){
 
 // Main Program
 void solve(int test_no){
+    debug(test_no);
     inll(N);
     vll a(N);
-    // map<int,int> m;
+    // map<ll,ll> m;
     rep(i,0,N){
         cin>>a[i];
         // m[a[i]]++;

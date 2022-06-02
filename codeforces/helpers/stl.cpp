@@ -268,11 +268,12 @@ template<class T> using oset = tree<T, null_type, less<T>, rb_tree_tag, tree_ord
 template<class T> using muset = tree<T, null_type, less_equal<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
 void myPBDS(){
-    // Policy Based Data Structure OR Ordered Set
+    // Policy Based Data Structure OR Ordered Set 
     // RB Tree implementation
-    // duplicates not allowed; ordered; 
+    // duplicates not allowed; ordered; Multi-Ordered Set-> Duplicates Allowed
     // find, insert, erase, lower_bound, upper_bound, find_by_order, order_of_key
     oset<int> s;
+    // muset<int> s;
     s.insert(2);    
     s.insert(3);    
     s.insert(1);     

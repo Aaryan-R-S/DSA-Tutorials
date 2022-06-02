@@ -26,6 +26,7 @@ using namespace std;
 // - https://www.interviewbit.com/problems/last-node-in-a-complete-binary-tree/
 // - https://leetcode.com/problems/kth-ancestor-of-a-tree-node/ [https://youtu.be/oib-XsjFa-M]
 // - https://www.spoj.com/problems/LCASQ/ [https://youtu.be/dOAxrhAUIhA]
+// - Morris Traversal (Inorder traversal in O(1) space i.e. without recursion) [https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion-and-without-stack/]
 /*
          7
      4      5

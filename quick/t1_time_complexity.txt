@@ -1,11 +1,11 @@
-Θ(g(n)) = {f(n): there exist positive constants c1, c2 and n0 such 
+Θ(g(n)) = {f(n): there exist `positive` constants c1, c2 and n0 such 
                  that 0 <= c1*g(n) <= f(n) <= c2*g(n) for all n >= n0}
 
-O(g(n)) = {f(n): there exist positive constants c and 
+O(g(n)) = {f(n): there exist `positive` constants c and 
                  n0 such that 0 <= f(n) <= c*g(n) for 
                  all n >= n0}
 
-Ω(g(n)) = {f(n): there exist positive constants c and
+Ω(g(n)) = {f(n): there exist `positive` constants c and
                  n0 such that 0 <= c*g(n) <= f(n) for
                  all n >= n0}
 
@@ -26,9 +26,8 @@ O(g(n)) = {f(n): there exist positive constants c and
 - https://www.geeksforgeeks.org/time-complexity-loop-loop-variable-expands-shrinks-exponentially/
 
 `Problems`
-- https://www.interviewbit.com/problems/reccmpl1/
-- https://www.interviewbit.com/problems/reccmpl2/
+- [!] https://www.interviewbit.com/problems/reccmpl2/ [Refer Hint]
 - https://www.interviewbit.com/problems/reccmpl3/
-- https://www.interviewbit.com/problems/amortized1/
-- https://www.interviewbit.com/problems/choose2/
+- [!] https://www.interviewbit.com/problems/amortized1/
+- [!] https://www.interviewbit.com/problems/choose2/ [Hint: Take log of f1 & f4 for comparision]
 - https://www.interviewbit.com/problems/nestedcmpl3/

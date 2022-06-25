@@ -74,7 +74,7 @@ Node* buildTreePre(int preOrder[], int inOrder[], int start, int end){
         return n;
     }
 
-    int pos = search(inOrder, start, end, curr);
+    int pos = search(inOrder, start, end, curr); // OR use map here
     n->left = buildTreePre(preOrder, inOrder, start, pos-1);
     n->right = buildTreePre(preOrder, inOrder, pos+1, end);
     return n;
@@ -97,7 +97,7 @@ Node* buildTreePos(int posOrder[], int inOrder[], int start, int end){
         return n;
     }
 
-    int pos = search(inOrder, start, end, curr);
+    int pos = search(inOrder, start, end, curr); // OR use map here
     n->right = buildTreePos(posOrder, inOrder, pos+1, end);
     n->left = buildTreePos(posOrder, inOrder, start, pos-1);
     return n;

@@ -1,8 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// `Problems`:
-// - First elem at least X (harder) [https://youtu.be/Hooe5ORdFsc]
+// First elem at least X (harder) [https://youtu.be/Hooe5ORdFsc]
 
 #define ll long long
 const int MOD = 1e9+7;

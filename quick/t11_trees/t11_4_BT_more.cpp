@@ -1,32 +1,33 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// `Non Recursive BT Traversals`:
+// - [!]Preorder-Inorder-Postorder Traversals in One Traversal [https://youtu.be/ySp2epYvgTE]
+// - [!]Preorder [https://www.interviewbit.com/problems/preorder-traversal/] [https://youtu.be/Bfqd8BsPVuw]
+// - [!]Inorder [https://youtu.be/lxTGsVXjwvM]
+// - [!]Postorder [https://www.interviewbit.com/problems/postorder-traversal/] [https://youtu.be/2YBhNLodD8Q] [https://youtu.be/NzIGLLwZBS8]
+// - [!]Morris Traversal (Inorder traversal in O(1) space i.e. without recursion) [https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion-and-without-stack/]
+
 // `Problems`:
-// - https://www.interviewbit.com/problems/construct-binary-tree-from-inorder-and-preorder/
+// - [!]https://www.interviewbit.com/problems/bst-iterator/ [https://youtu.be/4L5seG1d2dA]
+// - [!]https://www.interviewbit.com/problems/order-of-people-heights/
+// - [!]https://www.interviewbit.com/problems/next-pointer-binary-tree/ [https://youtu.be/30Bqbk-Vk3Q] [A Perfect BT]
+// - [!]https://www.interviewbit.com/problems/populate-next-right-pointers-tree/ [https://youtu.be/vy2mnT3TEXQ] [Not a Perfect BT]
+// - [!]https://www.interviewbit.com/problems/cousins-in-binary-tree/
+// - [!]https://www.interviewbit.com/problems/diagonal-traversal/
+// - [!]https://www.interviewbit.com/problems/last-node-in-a-complete-binary-tree/
+// - [!]https://www.interviewbit.com/problems/maximum-edge-removal/ [Graph | Improper Ques]
 // - https://www.interviewbit.com/problems/inorder-traversal-of-cartesian-tree/
+// - https://www.interviewbit.com/problems/vertical-order-traversal-of-binary-tree/
 // - https://www.interviewbit.com/problems/sum-root-to-leaf-numbers/
 // - https://www.interviewbit.com/problems/symmetric-binary-tree/
-// - [Non Recursive BT Traversal]
-// - Preorder-Inorder-Postorder Traversals in One Traversal [https://youtu.be/ySp2epYvgTE]
-// - Preorder [https://www.interviewbit.com/problems/preorder-traversal/] [https://youtu.be/Bfqd8BsPVuw]
-// - Inorder [https://youtu.be/lxTGsVXjwvM]
-// - Postorder [https://www.interviewbit.com/problems/postorder-traversal/] [https://youtu.be/2YBhNLodD8Q] [https://youtu.be/NzIGLLwZBS8]
-// - https://www.interviewbit.com/problems/bst-iterator/ [https://youtu.be/4L5seG1d2dA]
-// - https://www.interviewbit.com/problems/populate-next-right-pointers-tree/ [https://youtu.be/vy2mnT3TEXQ] [Not a Perfect BT]
-// - https://www.interviewbit.com/problems/next-pointer-binary-tree/ [https://youtu.be/30Bqbk-Vk3Q] [A Perfect BT]
 // - https://www.interviewbit.com/problems/root-to-leaf-paths-with-sum/
-// - https://www.interviewbit.com/problems/order-of-people-heights/
-// - https://www.interviewbit.com/problems/vertical-order-traversal-of-binary-tree/
 // - https://www.interviewbit.com/problems/hotel-reviews/
-// - https://www.interviewbit.com/problems/diagonal-traversal/
-// - https://www.interviewbit.com/problems/cousins-in-binary-tree/
-// - https://www.interviewbit.com/problems/maximum-edge-removal/ [Graph | Improper Ques]
-// - https://www.interviewbit.com/problems/burn-a-tree/
 // - https://www.interviewbit.com/problems/nodes-at-distance-k/
-// - https://www.interviewbit.com/problems/last-node-in-a-complete-binary-tree/
+// - https://www.interviewbit.com/problems/burn-a-tree/
 // - https://leetcode.com/problems/kth-ancestor-of-a-tree-node/ [https://youtu.be/oib-XsjFa-M]
 // - https://www.spoj.com/problems/LCASQ/ [https://youtu.be/dOAxrhAUIhA]
-// - Morris Traversal (Inorder traversal in O(1) space i.e. without recursion) [https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion-and-without-stack/]
+
 /*
          7
      4      5

@@ -145,7 +145,7 @@ int min_subset_diff_tabulation(int arr[], int n){
         sum += arr[i];
     }
     subset_sum_tabulation(arr, n, sum);
-    // Now check last line from dp2[n][0] to dp2[n][sum/2]
+    // Now check last line from dp2[n][sum/2] to dp2[n][0]
     int sum_till = sum/2;
     while(sum_till>=0){
         if(dp2[n][sum_till]){

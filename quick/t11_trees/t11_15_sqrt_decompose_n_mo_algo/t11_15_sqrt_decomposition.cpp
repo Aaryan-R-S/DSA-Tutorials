@@ -3,6 +3,8 @@ using namespace std;
 
 // Square root Decompostion ----------------------------------------------------
 // Refer - https://youtu.be/tuxMRkKuP8Y
+// Range Minimum Query - [https://youtu.be/NreaqzAKvg0]
+
 void sqrt_decomposition(){
     int n; cin>>n;
     vector<int> a(n);
@@ -40,7 +42,8 @@ void sqrt_decomposition(){
 // Mo's Algorithm --------------------------------------------------------------
 // Time complexity = Time taken for sorting queries + For adjusting curr_r + For adjusting curr_l
 // Time complexity = Q*log(Q) + (n/√n)*n + Q*√n = O((Q+n)*√n)
-// Refer this vid for Logic & Time Complexity - [https://youtu.be/0Cu9Kg7RJYg]
+// Refer this vid (OR custom `comp` function) for Logic & Time Complexity - [https://youtu.be/0Cu9Kg7RJYg]
+// [!]No. of distinct elements in range - [https://youtu.be/XPedtcrgA4E]
 
 int len;
 
@@ -106,9 +109,6 @@ void mo(){
     }
     
 }
-
-// Range Minimum Query - [https://youtu.be/NreaqzAKvg0]
-// No. of distinct elements in range - [https://youtu.be/XPedtcrgA4E]
 
 int main(){
     // sqrt_decomposition();

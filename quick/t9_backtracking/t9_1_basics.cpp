@@ -52,13 +52,10 @@ bool partition(int a[n], int i, int sum, int subArr[n], int sIndex=0){
 };
 
 // `Problems`
-// - https://www.interviewbit.com/problems/kth-permutation-sequence/
-// - https://www.interviewbit.com/problems/gray-code/
-// - Help for above problem - [https://youtu.be/KOD2BFauQbA]
-// - https://www.interviewbit.com/problems/subsets-ii/
-// - https://www.interviewbit.com/problems/palindrome-partitioning/
+// - [!]https://www.interviewbit.com/problems/kth-permutation-sequence/
+// - [!]https://www.interviewbit.com/problems/gray-code/
+// - [!]https://www.interviewbit.com/problems/palindrome-partitioning/
 // - https://www.interviewbit.com/problems/maximal-string/
-// - https://www.interviewbit.com/problems/all-possible-combinations/
 
 int main()
 {

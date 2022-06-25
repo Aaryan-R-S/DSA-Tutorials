@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-// Advance Version  - https://www.interviewbit.com/problems/nqueens/
+// Advance Version  - https://www.interviewbit.com/problems/nqueens/ [Hashing: https://www.youtube.com/watch?v=05y82cP3bJo]
 
 // Need to check only same col, upper left and upper right diagonal
 bool isSafe(int** arr, int x, int y, int n){

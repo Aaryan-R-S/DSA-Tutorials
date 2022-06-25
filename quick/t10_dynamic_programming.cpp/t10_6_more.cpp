@@ -2,14 +2,13 @@
 using namespace std;
 
 // Only refer -----------------------------------------------
-// Binary Str
-// Staircase
-// LCS
-// Ugly
-// LCS
-// Pair
+// - Binary Str
+// - Staircase
+// - LCS
+// - Ugly
+// - LCS
+// - Pair
 // ----------------------------------------------------------
-
 
 #define vi vector<int>
 #define vvi vector<vi>

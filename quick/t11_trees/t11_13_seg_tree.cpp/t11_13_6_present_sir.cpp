@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// Nested Segments ----------------
-// - [https://youtu.be/lPWCLJLokzs]
+// Nested Segments [https://youtu.be/lPWCLJLokzs]
+
 const int N = 2e5+2;
 int arr[N] = {0}, tree[4*N] = {0};
 

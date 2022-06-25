@@ -151,7 +151,7 @@ int knapsackRec(int val[], int wt[], int n, int W){
     }
 
     if(wt[n-1] > W){
-        return 0;
+        return knapsackRec(val, wt, n-1, W) + 0;
     }
 
     return max(
@@ -284,6 +284,10 @@ int coinGameDP(int arr[], int l, int r, vector<vector<int>> &dp){
 };
 
 // Q18) Josephus Problem ----------------------------
+// N = number of people; K = Every Kth person die
+// Return safe index (starting from 0)
+// https://www.youtube.com/watch?v=dzYq5VEMZIg
+// For k=2 refer Numberphile YT vid for O(1) code
 int josephus(int n, int k){
     if(n==1){
         return 0;

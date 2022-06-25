@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
  
-// `Problems`:
+// `Also refer`:
 // - Segment with max sum [https://youtu.be/pS6xaqaLuCU]
 
 #define MOD 1e9+7

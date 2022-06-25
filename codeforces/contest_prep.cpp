@@ -76,15 +76,32 @@ void swap(ll *a, ll *b){
 void solve(int test_no){
     debug(test_no);
     inll(N);
-    inll(Z);
+    inll(K);
     vll a(N);
-    // map<ll,ll> m;
+    vll b(N);
+    ll max_e = 1000000000, min_e = 100000000;
     rep(i,0,N){
-        cin>>a[i];
-        // m[a[i]]++;
+        a[i] = min_e + ( std::rand() % ( max_e - min_e + 1 ) );
+
+        // [For Random Num]
+        // rand_num = MIN + ( std::rand() % ( MAX - MIN + 1 ) );
     }
+    rep(i,0,N){
+        b[i] = min_e + ( std::rand() % ( max_e - min_e + 1 ) );
+    }
+
+    // // [For Shuffling]
+    // auto rng = std::default_random_engine {};
+    // std::shuffle(std::begin(a), std::end(a), rng);
     
-    // cout<<"Case #"<<test_no<<": "<<"IMPOSSIBLE"<<endl;
+    cout<<N<<endl;
+    for (int i = 0; i < N; i++){
+        cout<<a[i]<<" ";
+    }cout<<endl;
+    for (int i = 0; i < N; i++){
+        cout<<b[i]<<" ";
+    }cout<<endl;
+    cout<<K<<endl;
 }
 
 // Driver Program 
@@ -97,8 +114,8 @@ int main()
 #endif
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    in(t);
-    // int t = 1;    
+    // in(t);
+    int t = 1;
     for(int i=1; i<=t; i++){
         solve(i);
     }

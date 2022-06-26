@@ -75,14 +75,17 @@ void detectCycleUndirect(){
 // Cost of ST = cost of the spanning tree is the sum of the weights of all the edges in the tree
 // Minimum Spanning tree (MST) = min cost ST
 
-// FOR SEM -------------------------------------
-// Shortest distance in DAG (including negative edges) TOPOLOGICAL SORT - O(V+E)
-// KRUSKAL - O(E*logE) -- Refer gfg for implementation in java only
-// PRIMS + DIJKSTRA - O(V^2) in adj. matrix (preferred) & O(E*log(V)) using binary heaps in adj. list -- Refer gfg for implementation (both are almost same) 
-// O(V^2) - https://www.geeksforgeeks.org/prims-minimum-spanning-tree-mst-greedy-algo-5/ 
-// O(E*log(V)) - https://www.interviewbit.com/problems/useful-extra-edges/
-// BELLMANFORD - O(E*(V-1)) -- Using adj. list refer GFG (Kruskal's) for edge implementation
-// FLOYD WARSHALL - O(V^3) -- Use three loops only
+// Overview ----------------------------------------------------------------------
+// KRUSKAL - O(E*logE)
+// PRIMS + DIJKSTRA - O(V^2) in adj. matrix (preferred) & O(E*log(V)) using binary heaps in adj list
+// -> O(V^2) - https://www.geeksforgeeks.org/prims-minimum-spanning-tree-mst-greedy-algo-5/ 
+// -> O(E*log(V)) - https://www.interviewbit.com/problems/useful-extra-edges/
+// BELLMANFORD - O(E*(V-1)) 
+// FLOYD WARSHALL - O(V^3) 
+
+// `Problems:`
+// - Single src shortest path in DAG (including negative edges), in O(V+E) [https://www.geeksforgeeks.org/shortest-path-for-directed-acyclic-graphs/]
+// - Single src shortest path in simple graph with possible edge weights as 0 or 1 only, in O(V+E) [https://www.interviewbit.com/problems/min-cost-path/] [https://www.geeksforgeeks.org/0-1-bfs-shortest-path-binary-graph/]
 
 // Kruskal's Algorithm ------------------------------------------------------------
 // Time complexity - O(E*logV) or O(E*logE) (sorting period)

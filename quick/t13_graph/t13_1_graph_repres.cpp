@@ -124,9 +124,6 @@ void bfs(){
     cout<<endl;
 }
 
-// 0-1 BFS
-// https://www.interviewbit.com/problems/min-cost-path/
-
 // DFS Traversal -----------------------------------------------------------------------
 // The Time complexity of DFS is also O(V + E) when Adjacency List is used and O(V^2) when Adjacency Matrix is used, where V stands for vertices and E stands for edges.
 // NO STACK IS REQUIRED (OPTIONAL)
@@ -162,7 +159,6 @@ void dfsPos(vector<vi> &l, vi &vis, stack<int> &s, int node = 1){
 // Topological Sort -----------------------------------------------------------------------
 // Only directed acyclic graphs have topological sort
 // undirected or cyclic graphs do not have topological sort
-// it implies if during topological sort anyone doesn't traverse all the nodes exactly once then cycle exists
 // topological sort is not unique
 // REFER GFG for implementation - DFS - O(V+E) - https://www.geeksforgeeks.org/topological-sorting/
 // *IGNORE THIS CODE*

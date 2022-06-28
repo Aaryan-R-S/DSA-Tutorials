@@ -8,24 +8,21 @@ using namespace std;
 #define rep(s,e,c) for (int i = s; i < e; i c)
 
 // `Problems`:
-// - https://www.interviewbit.com/problems/stepping-numbers/
-// - https://www.interviewbit.com/problems/clone-graph/
-// - https://www.interviewbit.com/problems/convert-sorted-list-to-binary-search-tree/
-// - https://www.interviewbit.com/problems/word-ladder-i/
-// - https://www.interviewbit.com/problems/word-ladder-ii/
-// - https://www.interviewbit.com/problems/knight-on-chess-board/
-// - https://www.interviewbit.com/problems/smallest-multiple-with-0-and-1/ [https://youtu.be/Om47LiGTy8o]
-// - https://www.interviewbit.com/problems/largest-distance-between-nodes-of-a-tree/
+// - [!]https://www.interviewbit.com/problems/smallest-multiple-with-0-and-1/ [https://youtu.be/Om47LiGTy8o]
+// - [!]https://www.interviewbit.com/problems/stepping-numbers/
+// - [!]https://www.interviewbit.com/problems/clone-graph/
+// - [!]https://www.interviewbit.com/problems/largest-distance-between-nodes-of-a-tree/
+// - [!]https://www.interviewbit.com/problems/word-ladder-i/
+// - [!]https://www.interviewbit.com/problems/word-ladder-ii/
+// - [!]https://www.interviewbit.com/problems/permutation-swaps/
 // - https://www.interviewbit.com/problems/valid-path/
 // - https://www.interviewbit.com/problems/possibility-of-finishing-all-courses-given-prerequisites/
+// - https://www.interviewbit.com/problems/knight-on-chess-board/
 // - https://www.interviewbit.com/problems/region-in-binarymatrix/
-// - https://www.interviewbit.com/problems/min-cost-path/ [https://www.geeksforgeeks.org/0-1-bfs-shortest-path-binary-graph/]
-// - https://www.interviewbit.com/problems/permutation-swaps/
-// - https://www.interviewbit.com/problems/delete-edge/
+// - https://www.interviewbit.com/problems/mother-vertex/
 // - https://www.interviewbit.com/problems/path-with-good-nodes/
 // - https://www.interviewbit.com/problems/water-flow/
-// - https://www.interviewbit.com/problems/useful-extra-edges/
-// - https://www.interviewbit.com/problems/mother-vertex/
+// - https://www.interviewbit.com/problems/delete-edge/
 
 // Snake and ladder -- explore all possibility using BFS
 void sl(){

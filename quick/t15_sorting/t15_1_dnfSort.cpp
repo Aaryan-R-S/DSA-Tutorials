@@ -13,7 +13,7 @@ void printArray(int* arr, int len){
     cout<<endl;
 };
 
-// Zero's|Ones's|Unkonown|Two's
+// Zero's|Ones's|Unknown|Two's
 // 000000 111111 ******** 2222
 //        ^      ^      ^
 //        low    mid    high
@@ -42,10 +42,7 @@ void DNFSort(int* arr, int len, int a=0, int b=1, int c=2){
             high--;
         }
     }
-    
-
 };
-
 
 int main()
 {

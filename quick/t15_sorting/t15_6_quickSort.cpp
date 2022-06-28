@@ -23,7 +23,7 @@ int partition(int arr[], int low, int high){
     int i = low+1;
     int j = high;
 
-    // do while two avoid clash when there are two elems in sorted manner
+    // do while two avoid clash when there are only two elems in sorted manner
     do
     {
         while (arr[i]<=pivot && i<high)

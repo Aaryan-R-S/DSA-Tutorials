@@ -13,7 +13,6 @@ void printArray(int* arr, int len){
     cout<<endl;
 };
 
-
 void waveSort(int* arr, int len){
     for (int i = 1; i < len; i+=2)
     {
@@ -29,7 +28,6 @@ void waveSort(int* arr, int len){
         }
     }
 };
-
 
 int main()
 {

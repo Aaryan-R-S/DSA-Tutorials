@@ -144,7 +144,7 @@ node* reverseLinkedList(node* n){
         currentNode = nextNode;
     }
     currentNode->next = prevNode;
-    return prevNode; 
+    return prevNode; // currNode (to be checked)
 };
 
 int main()

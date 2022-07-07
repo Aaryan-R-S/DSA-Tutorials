@@ -93,7 +93,7 @@ void kmp2(){
     cout<<"[ ";
     for (int i=0;i<ans.size();i++){
         if(ans[i]==s.size()){
-            pos.push_back(i-2*s.size());    // index = i - len(s+'#') - len(s) + 1 = i - 2*len(s)
+            pos.push_back(i-2*s.size());    // index = i+1 - len(s+'#') - len(s) = i - 2*len(s)
             found++;
         }
         cout<<i<<" ";

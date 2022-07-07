@@ -2,29 +2,28 @@
 using namespace std;
 
 // `Problems`:
-// - https://www.interviewbit.com/problems/kth-row-of-pascals-triangle/
-// - https://www.interviewbit.com/problems/rotate-matrix/
-// - https://www.interviewbit.com/problems/find-duplicate-in-array/
-// - https://www.interviewbit.com/problems/repeat-and-missing-number-array/ OR [Use Swap sort if array is not constant or read-only]
+// - [!]https://www.interviewbit.com/problems/kth-row-of-pascals-triangle/
+// - [!]https://www.interviewbit.com/problems/find-duplicate-in-array/
+// - [!]https://www.interviewbit.com/problems/repeat-and-missing-number-array/ OR [Use Swap sort if array is not constant or read-only]
+// - [!]https://www.interviewbit.com/problems/set-matrix-zeros/
+// - [!]https://www.interviewbit.com/problems/maximum-consecutive-gap/ [https://youtu.be/wB-JSSNphI4]
+// - [!]https://www.interviewbit.com/problems/n3-repeat-number/ [Moore's Voting Algorithm | https://www.geeksforgeeks.org/n3-repeated-number-array-o1-space/]
+// - [!]https://www.interviewbit.com/problems/hotel-bookings-possible/
+// - [!]https://www.interviewbit.com/problems/next-permutation/
+// - [!]https://www.interviewbit.com/problems/max-distance/
+// - [!]https://www.interviewbit.com/problems/find-permutation/
+// - [!]https://www.interviewbit.com/problems/maximum-absolute-difference/
+// - [!]https://www.interviewbit.com/problems/maximum-unsorted-subarray/
+// - [!]https://www.interviewbit.com/problems/partitions/
+// - [!]https://www.interviewbit.com/problems/set-intersection/
+// - [!]https://www.interviewbit.com/problems/maximum-area-of-triangle/ [https://www.geeksforgeeks.org/maximum-area-triangle-different-vertex-colors/]
 // - https://www.interviewbit.com/problems/merge-intervals/
-// - https://www.interviewbit.com/problems/set-matrix-zeros/
 // - https://www.interviewbit.com/problems/largest-number/
 // - https://www.interviewbit.com/problems/first-missing-integer/
-// - https://www.interviewbit.com/problems/n3-repeat-number/ [Moore's Voting Algorithm | https://www.geeksforgeeks.org/n3-repeated-number-array-o1-space/]
-// - https://www.interviewbit.com/problems/maximum-consecutive-gap/ [https://youtu.be/wB-JSSNphI4]
-// - https://www.interviewbit.com/problems/max-distance/
-// - https://www.interviewbit.com/problems/next-permutation/
-// - https://www.interviewbit.com/problems/hotel-bookings-possible/
-// - https://www.interviewbit.com/problems/find-permutation/
-// - https://www.interviewbit.com/problems/maximum-absolute-difference/
-// - https://www.interviewbit.com/problems/maximum-unsorted-subarray/
 // - https://www.interviewbit.com/problems/max-min-05542f2f-69aa-4253-9cc7-84eb7bf739c4/
 // - https://www.interviewbit.com/problems/make-equal-elements-array/
 // - https://www.interviewbit.com/problems/segregate-0s-and-1s-in-an-array/
-// - https://www.interviewbit.com/problems/partitions/
-// - https://www.interviewbit.com/problems/reorder-data-in-log-files/
-// - https://www.interviewbit.com/problems/set-intersection/
-// - https://www.interviewbit.com/problems/maximum-area-of-triangle/ [https://www.geeksforgeeks.org/maximum-area-triangle-different-vertex-colors/]
+// - https://www.interviewbit.com/problems/rotate-matrix/
 // - https://www.interviewbit.com/problems/sort-array-with-squares/
 // - https://www.interviewbit.com/problems/maximum-sum-square-submatrix/
 // - https://www.interviewbit.com/problems/merge-two-sorted-lists-ii/
@@ -119,7 +118,7 @@ void desiredSum(){
     
 }
 
-// Find min index of first repeating element   
+// Find min (first) index of repeating element   
 void repeatingElem(){
     int n;
     cin>>n;

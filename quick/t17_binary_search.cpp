@@ -2,14 +2,14 @@
 using namespace std;
 
 // `Problems:`
-// - https://www.interviewbit.com/problems/median-of-array/ [https://youtu.be/LPFhl65R7ww]
+// - [!]https://www.interviewbit.com/problems/median-of-array/ [https://youtu.be/LPFhl65R7ww]
+// - [!]https://www.interviewbit.com/problems/matrix-median/ [https://youtu.be/79S7C6pvl2E]
+// - [!]https://www.interviewbit.com/problems/request-x-chocolates/
+// - [!]https://www.interviewbit.com/problems/search-in-bitonic-array/
+// - [!]https://www.interviewbit.com/problems/simple-queries/
+// - [!]https://www.interviewbit.com/problems/red-zone/
 // - https://www.interviewbit.com/problems/rotated-array/ 
-// - https://www.interviewbit.com/problems/matrix-median/ [https://youtu.be/79S7C6pvl2E]
 // - https://www.interviewbit.com/problems/woodcutting-made-easy/
-// - https://www.interviewbit.com/problems/search-in-bitonic-array/
-// - https://www.interviewbit.com/problems/simple-queries/
-// - https://www.interviewbit.com/problems/request-x-chocolates/
-// - https://www.interviewbit.com/problems/red-zone/
 
 // Given an array of size n find the k elems such that dist b/w any 2 elems is max possible
 bool isFeasible(int mid, int arr[], int n, int k){

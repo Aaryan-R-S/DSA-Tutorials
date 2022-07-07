@@ -114,7 +114,12 @@ ll phi(ll n) {ll number = n; if (n % 2 == 0) {number /= 2; while (n % 2 == 0) n 
 ll getRandomNumber(ll l, ll r) {return uniform_int_distribution<ll>(l, r)(rng);} 
 /*--------------------------------------------------------------------------------------------------------------------------*/
 
-// Main Program
+// %% Helper funcs %%
+
+
+// %% Main Program %%
+#define inpTC true
+// #define inpTC false
 void solve(int test_no){
     debug(test_no);
     in(N);
@@ -124,13 +129,11 @@ void solve(int test_no){
         cin>>a[i];
         // m[a[i]]++;
     }
-    ll ans = 0;
     
-    out(ans);
     return;
 }
 
-// Driver Program 
+// %% Driver Program %% 
 int main()
 {
 #ifndef ONLINE_JUDGE
@@ -140,8 +143,8 @@ int main()
 #endif
     fastio();
     auto start_time = high_resolution_clock::now();
-    in(t);
-    // ll t = 1;    
+    ll t;
+    if(inpTC){ cin>>t; } else { t = 1; }  
     for(int i=1; i<=t; i++){
         solve(i);
     }

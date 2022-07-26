@@ -33,10 +33,13 @@ void google(ll t) {cout << "Case #" << t << ": ";}
 #define forEach(a, b) for (auto &a : b)
 
 // %% STL %%
+#define vb vector<bool>
+#define vvb vector<vb>
 #define vl vector<ll>
 #define vvl vector<vl>
 #define vvvl vector<vvl>
 #define pll pair<ll, ll>
+#define vll vector<pll>
 #define mll map<ll, ll>
 #define sz(v) (int)(v).size()
 #define szArr(arr) (int)sizeof(arr)/sizeof(int)

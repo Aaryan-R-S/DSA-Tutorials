@@ -14,6 +14,7 @@ using namespace __gnu_pbds;
 #define NMAX_2D 1e3+9
 #define INF 1e18
 #define PI 3.141592653589793238462
+#define EPS 1e-6
 #define ld long double
 #define ll long long
 #define ull unsigned long long
@@ -25,6 +26,7 @@ using namespace __gnu_pbds;
 #define inStr(w) string w; cin>>w
 #define out(w) cout<<w<<"\n"
 #define out_(w) cout<<w<<" "
+#define outArr(w,st,en) rep(i,st,en){ out_(w[i]);} out("");
 void google(ll t) {cout << "Case #" << t << ": ";}
 
 // %% Loops %%
@@ -51,6 +53,8 @@ void google(ll t) {cout << "Case #" << t << ": ";}
 #define ff first
 #define ss second
 #define cntSetBits __builtin_popcountll
+#define pow(a,n) pow(a,n)+0.5
+#define powl(a,n) powl(a,n)+0.5
 
 // %% PBDS %%
 template<class T> using oset = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
@@ -132,7 +136,7 @@ void solve(int test_no){
         cin>>a[i];
         // m[a[i]]++;
     }
-    
+    out("ok");
     return;
 }
 

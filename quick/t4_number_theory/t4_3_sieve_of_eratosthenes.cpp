@@ -8,6 +8,7 @@ using namespace std;
 
 // -> The number of prime numbers less than or equal to n is approximately n/ln(n)
 // -> The k-th prime number approximately equals k*ln(k)
+// -> Goldbach’s conjecture: Each even integer n > 2 can be represented as a sum n = a+b so that both a and b are primes. [https://codeforces.com/problemset/problem/584/D]
 
 // Basic - PRINT ALL PRIME NUMS TILL N  
 void sieve(int n){
@@ -127,6 +128,81 @@ void divisorsN(int n){
     sort(divs.begin(), divs.end());
     cout<<cntDiv<<" "<<sumDiv<<endl;
     for(auto i:divs){
+        cout<<i<<" ";
+    }cout<<endl;
+}
+
+// Avoiding TLE on CF - O(sqrt(N))
+int fastFactorization(int n) {
+    int factorization=0;
+    for (int d : {2, 3, 5}) {
+        while ((n % d) == 0) {
+            factorization++;
+            n /= d;
+        }
+    }
+    vector<int> increments{4, 2, 4, 2, 4, 6, 2, 6};
+    
+    int i = 0;
+    for (int d = 7; d * d <= n; d += increments[i++]) {
+        while (n % d == 0) {
+            factorization++;
+            n /= d;
+        }
+        if (i == 8)
+            i = 0;
+    }
+    if (n > 1)
+        factorization++;
+    return factorization;
+}
+
+// Q(2.3) Primality Test - O(k*log(n)) << O(sqrt(n))
+// - https://www.geeksforgeeks.org/primality-test-set-3-miller-rabin/
+#define ll long long
+ll expo(ll a, ll b, ll mod) {ll res = 1; while (b > 0) {if (b & 1)res = (res * a) % mod; a = (a * a) % mod; b = b >> 1;} return res;}
+ll mod_mul(ll a, ll b, ll m) {a = a % m; b = b % m; return (((a * b) % m) + m) % m;}
+
+bool millerTest(ll d, ll n){
+    ll a = 2 + rand() % (n - 4);
+    ll x = expo(a, n-1, n);
+    if(x==1 || x==n-1){
+        return true;
+    }
+    while(d != n-1){
+        x = mod_mul(x,x,n);
+        d *= 2;
+        if(x==1) return false;
+        if(x==n-1) return true;
+    }
+    return false;
+}
+
+void primesTill(){
+    ll N; cin>>N;
+    ll K; cin>>K;
+    vector<ll> a;
+    a.push_back(2);
+    a.push_back(3);
+    bool prime;
+    for (int i = 5; i <= N; i++){
+        prime = true;
+        ll d = i-1;
+        while(d%2==0){
+            d/=2;
+        }
+        for (int j = 0; j < K; j++){
+            if(millerTest(d, i)==false){
+                prime = false;
+                break;
+            }   
+        }
+        if(prime){
+            a.push_back(i);
+        }
+    }
+
+    for(auto i:a){
         cout<<i<<" ";
     }cout<<endl;
 }

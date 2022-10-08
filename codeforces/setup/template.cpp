@@ -117,12 +117,18 @@ pair<vl, vl> calcFactNInvFact(ll N){
 ll combination(ll n, ll r, ll m, vl &fact, vl &ifact) {ll val1 = fact[n]; ll val2 = ifact[n - r]; ll val3 = ifact[r]; return (((val1 * val2) % m) * val3) % m;}
  
 vector<ll> sieve(int n) {int*arr = new int[n + 1](); vector<ll> vect; for (int i = 2; i <= n; i++)if (arr[i] == 0) {vect.push_back(i); for (int j = 2 * i; j <= n; j += i)arr[j] = 1;} return vect;}
+vl sieve1(int n){vl vect(n+1, 0); vect[0] = -1; vect[1] = -1; for (int i = 2; i <= n; i++){if (vect[i] == 0) {vect[i] = i; for (int j = 2 * i; j <= n; j += i){vect[j] = i;}}}return vect;}
 ll phi(ll n) {ll number = n; if (n % 2 == 0) {number /= 2; while (n % 2 == 0) n /= 2;} for (ll i = 3; i <= sqrt(n); i += 2) {if (n % i == 0) {while (n % i == 0)n /= i; number = (number / i * (i - 1));}} if (n > 1)number = (number / n * (n - 1)) ; return number;} //O(sqrt(N))
 ll getRandomNumber(ll l, ll r) {return uniform_int_distribution<ll>(l, r)(rng);} 
 /*--------------------------------------------------------------------------------------------------------------------------*/
 
 // %% Helper funcs %%
 
+
+// -> GREEDY, TWO POINTER
+// -> BINARY SEARCH
+// -> DYNAMIC PROGRAMMING
+// -> COMPLEX DATA STRUCTURES OR ALGORITHM
 
 // %% Main Program %%
 #define inpTC true

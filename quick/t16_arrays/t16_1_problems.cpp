@@ -1,6 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// [Prefix Sum]
+// - https://usaco.guide/silver/prefix-sums?lang=cpp
+// - https://usaco.guide/silver/more-prefix-sums?lang=cpp
+// - https://codeforces.com/blog/entry/86420
+
 // `Problems`:
 // - [!]https://www.interviewbit.com/problems/kth-row-of-pascals-triangle/
 // - [!]https://www.interviewbit.com/problems/find-duplicate-in-array/

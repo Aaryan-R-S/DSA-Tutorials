@@ -1,2 +1,2 @@
 test_no 1
-Time: 0ms
+Time: 1ms

@@ -260,6 +260,10 @@ void myHeap(){
     cout<<endl;
 }
 
+void myBitsets(){
+    // - [https://codeforces.com/blog/entry/73558] (+ Problems & Videos included in the blog)
+}
+
 // %% PBDS %%
 #include<ext/pb_ds/assoc_container.hpp>
 #include<ext/pb_ds/tree_policy.hpp>

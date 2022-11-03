@@ -5,6 +5,12 @@ using namespace std;
 #define vvi vector<vi>
 #define rep(s,e,c) for (int i = s; i < e; i c)
 
+// BFS Applications - https://cp-algorithms.com/graph/breadth-first-search.html#applications-of-bfs
+// Strongly Connected Components - https://youtu.be/V8qIqJxCioo
+// Bridges / Cut edges in graphs - https://youtu.be/2rjZH0-2lhk
+// Articulation Point / Cut vertices in graphs - https://youtu.be/3t3JHswP7mw
+// is-this-fft blog - https://codeforces.com/blog/entry/68138
+
 // Detect cycle ---------------------------------------------------
 bool isCycle(int src, vvi &adj, vi &vis, int parent){
     vis[src] = 1;

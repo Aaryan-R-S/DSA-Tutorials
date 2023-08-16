@@ -6,7 +6,7 @@ using namespace std;
 // - https://www.interviewbit.com/problems/shortest-unique-prefix/
 // - https://www.interviewbit.com/problems/xor-between-two-arrays/
 
-#define INT_SIZE 32
+#define INT_SIZE 31
 class Node{
 public:
     Node *next[2];

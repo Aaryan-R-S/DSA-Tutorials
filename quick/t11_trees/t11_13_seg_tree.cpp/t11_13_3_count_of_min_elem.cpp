@@ -2,7 +2,7 @@
 using namespace std;
  
 // `Also refer`:
-// - Segment with max sum [https://youtu.be/pS6xaqaLuCU]
+// - Segment with max sum (hard) [https://youtu.be/pS6xaqaLuCU]
 
 #define MOD 1e9+7
 const long long N = 1e5+2;

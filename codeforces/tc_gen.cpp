@@ -101,47 +101,57 @@ ll phin(ll n) {ll number = n; if (n % 2 == 0) {number /= 2; while (n % 2 == 0) n
 ll getRandomNumber(ll l, ll r) {return uniform_int_distribution<ll>(l, r)(rng);} 
 /*--------------------------------------------------------------------------------------------------------------------------*/
 
-ll max_e = 1000000000, min_e = -1000000000;
-const int range_from  = min_e;
-const int range_to    = max_e;
-std::random_device                  rand_dev;
-std::mt19937                        generator(rand_dev());
-std::uniform_int_distribution<int>  distr(range_from, range_to);
+int get_bit(int n, int i){
+    return ((n&(1<<i)) != 0);
+}
+
+int update_bit(int n, int i, int b){
+    n = n&(~(1<<i));  // clear bit
+    n = n|(b<<i);  // set bit
+    return n;
+}
+
+int flip_bit(int n, int i){
+    int curr_bit = get_bit(n, i);
+    return update_bit(n, i, 1-curr_bit);
+}
 
 // Main Program
 void solve(int test_no){
     debug(test_no);
     in(N);
-    in(K);
-    vl a(N);
-    vl b(N);
+    vl a;
     
-    rep(i,0,N){
-        a[i] = distr(generator);
-
-        // [For Random Num]
-        // rand_num = MIN + ( std::rand() % ( MAX - MIN + 1 ) );
-        // a[i] = min_e + ( std::rand() % ( max_e - min_e + 1 ) );
-    }
-    rep(i,0,N){
-        b[i] = distr(generator);
+    ll max_e = 100, min_e = 1;
+    // ll max_e = 1, min_e = 0;
+    
+    rep(i,2,N+1){
+        max_e = i-1;
+        min_e = 1;
+        a.push_back(min_e + ( std::rand() % ( max_e - min_e + 1 ) ));
     }
 
-    // // [For Shuffling]
-    // auto rng = std::default_random_engine {};
-    // std::shuffle(std::begin(a), std::end(a), rng);
-    
     cout<<N<<endl;
 
-    for (int i = 0; i < N; i++){
+    // for (int i = 0; i < N; i++){
+    //     cin>>a[i];
+    // }
+
+    for (int i = 0; i < N-1; i++){
         cout<<a[i]<<" ";
     }cout<<endl;
 
-    for (int i = 0; i < N; i++){
-        cout<<b[i]<<" ";
-    }cout<<endl;
+    // cout<<"{";
+    // for (int i = 0; i < N-1; i++){
+    //     cout<<a[i]<<(i!=N-2 ?",":"");
+    // }cout<<"}"<<endl;
 
-    cout<<K<<endl;
+    max_e = N, min_e = 1;
+    ll X = min_e + ( std::rand() % ( max_e - min_e + 1 ) );
+    ll Y = min_e + ( std::rand() % ( max_e - min_e + 1 ) );
+    cout<<X<<endl;
+    cout<<Y<<endl;
+    cout<<endl;
 
     return;
 }

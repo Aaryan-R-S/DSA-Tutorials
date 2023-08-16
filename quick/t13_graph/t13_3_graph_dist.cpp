@@ -7,6 +7,8 @@ using namespace std;
 #define pii pair<int,int>
 #define rep(s,e,c) for (int i = s; i < e; i c)
 
+// Some problems on DSU till before offline RMQ - [https://cp-algorithms.com/data_structures/disjoint_set_union.html]
+
 // THREE FUNCS -----------------------------------------------------------------
 void make_set(int idx, vi &parent, vi &size){
     parent[idx] = idx;

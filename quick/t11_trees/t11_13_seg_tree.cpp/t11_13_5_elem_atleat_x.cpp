@@ -1,8 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// First elem at least X (harder) [https://youtu.be/Hooe5ORdFsc]
-
 #define ll long long
 const int MOD = 1e9+7;
 const int N = 1e5+2;

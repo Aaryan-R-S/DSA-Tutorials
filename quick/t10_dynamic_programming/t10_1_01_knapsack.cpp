@@ -12,7 +12,7 @@ const int mod = 1002;
 // A. Knapsack Problems:
 // Three types -
 // 1. Fractional Knapsack (see Greedy)
-// 2. 01 Knapsack (DP)
+// 2. 01 Knapsack (DP) | Advanced Query Version - [https://www.youtube.com/live/jYuy5CaK-2w?feature=share]
 // 3. Unbound Knapsack (DP)
 int dp1[mod][mod] = {-1};
 

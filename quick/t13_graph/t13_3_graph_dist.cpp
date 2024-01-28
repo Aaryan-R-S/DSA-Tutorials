@@ -9,6 +9,10 @@ using namespace std;
 
 // Some problems on DSU till before offline RMQ - [https://cp-algorithms.com/data_structures/disjoint_set_union.html]
 
+// Weighted DSU - https://youtu.be/oLsk9w94aY4?si=UMtouUz2saoOP5kt
+// Rollbacks in DSU or Segment Trees - https://youtu.be/AW_iea9xpFw?si=Qi1-stYW_Lw1pbhp
+// DSU on Tree - https://youtu.be/92unAh2APJ0?si=wBEllUJEpQa37bHP
+
 // THREE FUNCS -----------------------------------------------------------------
 void make_set(int idx, vi &parent, vi &size){
     parent[idx] = idx;

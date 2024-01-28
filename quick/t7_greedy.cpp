@@ -157,6 +157,9 @@ void diff(){
     cout<<mn<<" "<<mx<<endl;
 }
 
+// (Q7) Smallest number you cannot using elements of a given array
+// Solution - Sort the array, for each i if prefixSum_i (not including ith element) + 1 is less than arr[i] then ok otherwise your answer is prefixSum_i + 1
+
 // `Problems`:
 // - [!]https://www.interviewbit.com/problems/gas-station/
 // - [!]https://www.interviewbit.com/problems/distribute-candy/

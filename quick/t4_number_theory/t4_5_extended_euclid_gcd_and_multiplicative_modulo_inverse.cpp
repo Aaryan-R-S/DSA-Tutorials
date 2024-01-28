@@ -37,6 +37,15 @@ int multModInverse(int A, int m){
     return ((ans.x<0) ? (ans.x+m) : (ans.x));  
 }
 
+// Given x, y are solutions of ax+by = c then x1 = x + b/g * m and y1 = y - a/g * m are general solutions of this equation for some integer k
+
+// What is min possible value of |x| + |y|?
+// We know that x1 = x + b/g * m and y1 = y - a/g * m
+// now min(x1+y1) = x + y + m*(b/g-a/g) and we do the case work
+// 1)if a>b then choose for max value of m
+// 2)ifa<b then choose the min value of m
+// 3)if a==b then min(x1+y1) = x+y
+
 int main()
 {
     int a, b;

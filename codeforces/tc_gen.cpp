@@ -120,37 +120,33 @@ int flip_bit(int n, int i){
 void solve(int test_no){
     debug(test_no);
     in(N);
+    // in(K);
     vl a;
     
-    ll max_e = 100, min_e = 1;
+    ll max_e = 50, min_e = 1;
     // ll max_e = 1, min_e = 0;
-    
-    rep(i,2,N+1){
-        max_e = i-1;
-        min_e = 1;
+
+    for (int i = 0; i < N; i++){ 
         a.push_back(min_e + ( std::rand() % ( max_e - min_e + 1 ) ));
     }
+    
 
     cout<<N<<endl;
+    // cout<<K<<endl;
 
     // for (int i = 0; i < N; i++){
     //     cin>>a[i];
     // }
 
-    for (int i = 0; i < N-1; i++){
-        cout<<a[i]<<" ";
-    }cout<<endl;
+    // for (int i = 0; i < N; i++){
+    //     cout<<a[i]<<" ";
+    // }cout<<endl;
 
-    // cout<<"{";
-    // for (int i = 0; i < N-1; i++){
-    //     cout<<a[i]<<(i!=N-2 ?",":"");
-    // }cout<<"}"<<endl;
+    cout<<"{";
+    for (int i = 0; i < N; i++){
+        cout<<a[i]<<(i!=N-1 ?",":"");
+    }cout<<"}"<<endl;
 
-    max_e = N, min_e = 1;
-    ll X = min_e + ( std::rand() % ( max_e - min_e + 1 ) );
-    ll Y = min_e + ( std::rand() % ( max_e - min_e + 1 ) );
-    cout<<X<<endl;
-    cout<<Y<<endl;
     cout<<endl;
 
     return;

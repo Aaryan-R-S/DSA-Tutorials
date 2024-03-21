@@ -123,7 +123,78 @@ ll getRandomNumber(ll l, ll r) {return uniform_int_distribution<ll>(l, r)(rng);}
 /*--------------------------------------------------------------------------------------------------------------------------*/
 
 // %% Helper funcs %%
+#define vp vector<Point>
+#define vvp vector<vp>
 
+struct Point{
+    int type;  // 0, 1 ,2 -> none, golden, silver
+    int score;
+    Point(){
+        type = 0;
+        score = 0;
+    }
+};
+
+#define vs vector<string>
+map<pll, vs> dirToTileIdMap;
+
+// 0,1,2,3 -> up, right, down, left
+
+void setDirToTileIdMap(){
+    dirToTileIdMap[{0,1}] = dirToTileIdMap[{1,0}] = {"9", "B", "D", "F"};
+    dirToTileIdMap[{0,2}] = dirToTileIdMap[{2,0}] = {"C", "D", "E", "F"};
+    dirToTileIdMap[{0,3}] = dirToTileIdMap[{3,0}] = {"A", "B", "E", "F"};
+    dirToTileIdMap[{1,2}] = dirToTileIdMap[{2,1}] = {"5", "7", "D", "F"};
+    dirToTileIdMap[{1,3}] = dirToTileIdMap[{3,1}] = {"3", "7", "B", "F"};
+    dirToTileIdMap[{2,3}] = dirToTileIdMap[{3,2}] = {"6", "7", "E", "F"};
+}
+
+map<string, int> tileIdToCountMap;
+map<string, int> tileIdToCostMap;
+
+void setTileIdToCountMap(){
+    tileIdToCountMap["3"] = 0;
+    tileIdToCountMap["5"] = 0;
+    tileIdToCountMap["6"] = 0;
+    tileIdToCountMap["7"] = 0;
+    tileIdToCountMap["9"] = 0;
+    tileIdToCountMap["A"] = 0;
+    tileIdToCountMap["B"] = 0;
+    tileIdToCountMap["C"] = 0;
+    tileIdToCountMap["D"] = 0;
+    tileIdToCountMap["E"] = 0;
+    tileIdToCountMap["F"] = 0;
+
+    tileIdToCostMap["3"] = 0;
+    tileIdToCostMap["5"] = 0;
+    tileIdToCostMap["6"] = 0;
+    tileIdToCostMap["7"] = 0;
+    tileIdToCostMap["9"] = 0;
+    tileIdToCostMap["A"] = 0;
+    tileIdToCostMap["B"] = 0;
+    tileIdToCostMap["C"] = 0;
+    tileIdToCostMap["D"] = 0;
+    tileIdToCostMap["E"] = 0;
+    tileIdToCostMap["F"] = 0;
+}
+
+struct Tile{
+    int type; // 3,5,6,7,9,A,B,C,D,E,F
+    int x, y;
+};
+
+vector<Tile> tilePlaced;
+
+struct Grid{
+    int rows;
+    int cols;
+    vvp mat;
+    Grid(int r, int c) {
+        rows = r;
+        cols = c;
+        mat = vvp(rows, vp(cols, Point()));
+    }
+};
 
 // -> GREEDY, TWO POINTER
 // -> BINARY SEARCH
@@ -131,18 +202,59 @@ ll getRandomNumber(ll l, ll r) {return uniform_int_distribution<ll>(l, r)(rng);}
 // -> COMPLEX DATA STRUCTURES OR ALGORITHM
 
 // %% Main Program %%
-#define inpTC true
-// #define inpTC false
+// #define inpTC true
+#define inpTC false
 void solve(int test_no){
     debug(test_no);
-    in(N);
-    vl a(N);
-    // mll m;
-    rep(i,0,N){
-        cin>>a[i];
-        // m[a[i]]++;
+
+    setDirToTileIdMap();
+    setTileIdToCountMap();
+
+    in(cols);
+    in(rows); 
+    Grid grid(rows, cols);
+
+    in(g_points); in(s_points);
+    in(total_tiles);
+
+    rep(i,0,g_points){
+        in(y);
+        in(x); 
+        grid.mat[x][y].type = 1;
     }
-    out("ok");
+
+    rep(i,0,s_points){
+        in(y); 
+        in(x); 
+        in(score);
+        grid.mat[x][y].type = 2;
+        grid.mat[x][y].score = score;
+    }
+
+    rep(i,0,total_tiles){
+        inStr(tile_id);
+        in(cost); in(num_tiles);
+        tileIdToCountMap[tile_id] = num_tiles; 
+        tileIdToCostMap[tile_id] = cost;
+    }
+
+    // print grid.mat
+    rep(i,0,rows){
+        rep(j,0,cols){
+            out_(grid.mat[i][j].type);
+        }
+        out("");
+    }
+
+    tilePlaced.clear();
+
+    // print tiles with type and coordinates
+    for(auto it: tilePlaced){
+        out_(it.type);
+        out_(it.y);
+        out(it.x);
+    }
+
     return;
 }
 
